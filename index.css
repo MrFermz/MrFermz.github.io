@@ -1,0 +1,45 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Kanit', sans-serif;
+}
+
+.container {
+    /* background-color: rgb(255, 234, 188); */
+    width: 100%;
+    margin-top: 30px;
+}
+
+.container-title {
+    margin: 0px;
+}
+
+.container-sub-title {
+    margin: 0px;
+}
+
+.title {
+    text-align: center;
+    margin: 0px;
+    font-size: 100px;
+    text-decoration: underline;    
+}
+
+.sub-title {
+    text-align: center;
+    margin: 0px;
+    font-size: 50px;
+    list-style-type: none;
+}
+
+.bg-pink {
+    background-color: pink;
+}
+
+.bg-lightblue {
+    background-color: lightblue;
+}
+
+.bg-burlywood {
+    background-color: burlywood;
+}
