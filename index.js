@@ -35,8 +35,8 @@ function anni() {
 
     var Now = now.toLocaleString('th-th', format)
     var Start = start.toLocaleString('th-th', format)
-    var remain = `คบแล้ว ~ ${year} ปี ${month} เดือน ${day} วัน ${hour}:${min}:${sec} น.`
-    var anni = `ครบรอบอีก ~ ${month - 1} เดือน ${day + 1} วัน`
+    var remain = `คบแล้ว ~ ${year} ปี ${sub(12, month)} เดือน ${day} วัน ${hour}:${min}:${sec} น.`
+    var anni = `ครบรอบอีก ~ ${month} เดือน ${day + 1} วัน`
 
     // console.log(nowYears, startYears)
     // console.log(nowMonths, startMonths)
