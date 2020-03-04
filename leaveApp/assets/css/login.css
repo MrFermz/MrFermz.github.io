@@ -1,0 +1,52 @@
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.top {
+    margin-top: 200px;
+}
+
+.container-login {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+
+.input-text {
+    width: 99.5%;
+    border: solid 1px lightgray;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+}
+
+#message {
+    color: red;
+    font-weight: bold;
+}
+
+.input-button {
+    width: 100%;
+    border: none;
+    padding: 15px;
+    font-weight: bold;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #F2F3F4;
+}
+
+.input-button:hover {
+    background-color: #85929E;
+}
+
+.input-button:focus {
+    outline: none;
+}
+
+/* @media only screen and (max-width: 700px) {
+    .input-text {
+        width: 95%;
+    }
+} */

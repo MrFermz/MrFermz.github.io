@@ -1,0 +1,179 @@
+#desktop-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.desktop-label {
+    padding-left: 20px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+input[type=date], .filter-users {
+    border: solid 1px lightgray;
+    background-color: white;
+}
+
+@media only screen and (max-width: 700px) {
+    #desktop-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    #desktop-container input {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        width: 92%;
+    }
+
+    .desktop-label {
+        font-weight: bold;
+        padding-top: 10px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .table-report {
+        width: 100%;
+    }
+
+    .th-NO {
+        width: 20px;
+    }
+
+    .th-name {
+        width: auto;
+    }
+
+    .th-ID {
+        width: 20px;
+    }
+
+    .th-icon {
+        width: 25px;
+    }
+}
+
+.th-no {
+    width: 25px;
+}
+
+.th-id {
+    width: 20px;
+}
+
+.th-name {
+    width: 40%;
+}
+
+@media only screen and (max-width: 500px) {
+    .th-name {
+        width: auto;
+    }
+
+    .td-fname {
+        display: none;
+    }
+
+    .td-lname {
+        display: none;
+    }
+}
+
+.name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.td-fname {
+    margin-right: 5px;
+}
+
+.td-lname {
+    margin-right: 5px;
+}
+
+img {
+    width: 25px;
+}
+
+.filter-label {
+    text-align: left;
+}
+
+#desktop-container input {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+}
+
+.card2 {
+    margin-top: 20px;
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.summary {
+    border-bottom: solid 1px lightgray;
+    padding: 10px;
+    font-weight: bold;
+    font-size: large;
+}
+
+table, th, td {
+    border: none;
+    padding: 10px;
+    table-layout: fixed;
+}
+
+th, td {
+    word-wrap: break-word;
+}
+
+/* .sticky {
+    position: fixed;
+    top: 0;
+} */
+
+.tr-odd {
+    background-color: #EAECEE;
+}
+
+.value {
+    font-weight: bold;
+}
+
+.td-sick, .th-sick {
+    color: #E74C3C;
+}
+
+.td-vacation, .th-vacation {
+    color: #F39C12;
+}
+
+.td-business, .th-business {
+    color: #3498DB;
+}
+
+.td-substitution, .th-substitution {
+    color: #2ECC71;
+}
+
+.table-report {
+    width: 100%;
+}
+
+.tr-content:hover {
+    background-color: lightgray;
+}
