@@ -1,0 +1,182 @@
+* {
+    font-family: 'Kanit', sans-serif;
+}
+
+body { 
+    margin: 0px;
+    padding: 0px;
+    /* background-color: #F8F9F9; */
+    /* background-color: gray; */
+    background: url(http://tavonline.net/html/mat/default/images/bg.png);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 5px;
+}
+
+.container-main {
+    display: flex;
+    justify-content: center;
+}
+
+.container-top {
+    display: flex;
+    justify-content: center;
+}
+
+.container-left {
+    margin: 10px;
+}
+
+.card-left {
+    width: 250px;
+    height: 600px;
+}
+
+.container-right {
+    margin: 10px;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-around;
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+input[type="button"] {
+    border: none;
+    padding: 15px 5px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+input[type="button"]:hover {
+    color: orange;
+    cursor: pointer;
+}
+
+input[type="button"]:focus {
+    outline: none;
+}
+
+.nav-item-left {
+    padding: 15px 5px;
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.nav-item-right {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.container-content {
+    width: 480px;
+    padding: 10px;
+}
+
+#content-home {
+    display: flex;
+}
+
+#content-resume {
+    display: none;
+}
+
+#content-portfolio {
+    display: none;
+}
+
+#content-contact {
+    display: none;
+}
+
+.container-info {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.container-info .avatar {
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+    border: 1px solid black;
+}
+
+.container-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: center;
+}
+
+.content-top {
+    padding: 50px;
+    width: 670px;
+    margin: 20px 10px 10px 10px;
+    text-align: center;
+}
+
+.content-footer {
+    padding: 50px;
+    width: 670px;
+    margin: 10px;
+    text-align: center;
+    margin: 10px 10px 20px 10px;
+}
+
+label {
+    cursor: text;
+}
+
+@media only screen and (max-width: 800px) {
+    .container-main {
+        flex-direction: column;
+    }
+
+    .container-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-left {
+        width: 100%;
+        height: 600px;
+    }
+
+    .container-nav {
+        flex-grow: 1;
+        width: auto;
+    }
+    
+    .container-content {
+        flex-grow: 1;
+        width: auto;
+    }
+
+    .content-top {
+        width: 100%;
+    }
+    
+    .content-footer {
+        width: 100%;
+    }
+}
