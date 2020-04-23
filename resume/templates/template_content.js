@@ -1,17 +1,128 @@
-var CONTENT = [
-    `Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency and powerful crime figures. The open world design lets players freely roam San Andreas' open countryside and the fictional city of Los Santos, based on Los Angeles.`,
-    `The game is played from either a third-person or first-person perspective, and its world is navigated on foot or by vehicle. Players control the three lead protagonists throughout single-player and switch among them, both during and outside missions. The story is centred on the heist sequences, and many missions involve shooting and driving gameplay. A "wanted" system governs the aggression of law enforcement response to players who commit crimes. Grand Theft Auto Online, the game's online multiplayer mode, lets up to 30 players engage in a variety of different cooperative and competitive game modes.`,
-    `The game's development began soon after Grand Theft Auto IV's release and was shared between many of Rockstar's studios worldwide. The development team drew influence from many of their previous projects such as Red Dead Redemption and Max Payne 3 and designed the game around three lead protagonists to innovate on the core structure of its predecessors. Much of the development work constituted the open world's creation, and several team members conducted field research around California to capture footage for the design team. The game's soundtrack features an original score composed by a team of producers who collaborated over several years. It was released in September 2013 for PlayStation 3 and Xbox 360, in November 2014 for PlayStation 4 and Xbox One, and in April 2015 for Microsoft Windows.`,
-    `Extensively marketed and widely anticipated, the game broke industry sales records and became the fastest-selling entertainment product in history, earning $800 million in its first day and $1 billion in its first three days. It received widespread critical acclaim, with praise directed at its multiple protagonist design, open world, presentation and gameplay. However, it caused controversies related to its depiction of violence and women. Considered one of seventh and eighth generation console gaming's most significant titles and among the best video games ever made, it won year-end accolades including Game of the Year awards from several gaming publications. It is the second best-selling video game of all time with over 120 million copies shipped and one of the most financially successful entertainment products of all time, with about $6 billion in worldwide revenue.`
-]
 
 
 function template_home() {
     let markup = `
         ${menuList.map((ele, i) => { return (
-            `<div id="content-${ele}" class="container-content card">
-                 <label class="content">${CONTENT[i]}</label>
-            </div>`
+            `<div id="content-${ele}" class="container-content card"></div>`
         )}).join('')}`
+    return markup
+}
+
+
+function template_about() {
+    let title_about = ABOUT.title
+    let title_hobby = HOBBY.title
+    let title_skill_design = SKILLS.title_design
+    let title_skill_coding = SKILLS.title_coding
+    let markup = `
+        <div class="title">${capitalizer(title_about)}</div>
+        <div class="content">${ABOUT.content}</div>
+
+        <div class="title">${capitalizer(title_hobby)}</div>
+        <div class="container-hobby">
+            ${HOBBY.content.map((ele, i) => { return (`
+                <div class="card">
+                    <img src="./assets/icons/${ele[0]}.svg">
+                    <div class="hobby-title">${ele[1]}</div>
+                    <div class="hobby-content">${ele[2]}</div>
+                </div>
+            `)}).join('')}
+        </div>
+
+        <div class="container-skill">
+            <div class="skill-design">
+                <div class="title">${capitalizer(title_skill_design)}</div>
+                ${SKILLS.content_design.map((ele, i) => { return (`
+                    <div class="content-skill-title">${ele[0]}</div>
+                    <progress id="file" value="${ele[1]}" max="100"></progress>
+                `)}).join('')}
+            </div>
+            <div class="skill-coding">
+                <div class="title">${capitalizer(title_skill_coding)}</div>
+                ${SKILLS.content_coding.map((ele, i) => { return (`
+                    <div class="content-skill-title">${ele[0]}</div>
+                    <progress id="file" value="${ele[1]}" max="100"></progress>
+                `)}).join('')}
+            </div>
+        </div>
+    `
+    return markup
+}
+
+
+function template_resume() {
+    let title_resume = RESUME.title
+    let title_timeline = ['working history', 'Education history']
+    let markup = `
+        <div class="title">${capitalizer(title_resume)}</div>
+        <div class="container-timeline">
+            <div class="timeline-working">
+                <div class="container-title">
+                    <div class="container-icon">
+                        <img class="title-icon" src="./assets/icons/work.svg">
+                    </div>
+                    <label class="title-timeline">${capitalizer(title_timeline[0])}</label>
+                </div>
+                <div class="container-timeline-content">
+                    <ul>
+                    ${TIMELINE.working_title.map((ele, i) => { return (`
+                        <li id="li-working-${i}">
+                            <label>${ele[0]}</label>
+                            <span>${ele[1]}</span>
+                            <p>${ele[2]}</p>
+                        </li>
+                    `)}).join('')}
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-education">
+                <div class="container-title">
+                    <div class="container-icon">
+                        <img class="title-icon" src="./assets/icons/graduate.svg">
+                    </div>
+                    <label class="title-timeline">${capitalizer(title_timeline[1])}</label>
+                </div>
+                <div class="container-timeline-content">
+                    ${TIMELINE.education_title.map((ele, i) => { return (`
+                        <li id="li-education-${i}">
+                            <label>${ele[0]}</label>
+                            <span>${ele[1]}</span>
+                            <p>${ele[2]}</p>
+                        </li>
+                    `)}).join('')}
+                </div>
+            </div>
+        </div>
+    `
+    return markup
+}
+
+
+function template_port() {
+    let title_port = PORT.title
+    let markup = `
+        <div class="title">${capitalizer(title_port)}</div>
+        <div class="container-port">
+            ${PORT_CONTENT.port_card.map((ele, i) => { return (`
+                <div class="card">
+                    <img src="./assets/images/${ele[0]}">
+                    <div class="detail">
+                        <div class="port-title">${ele[1]}</div>
+                        <div class="port-content">${ele[2]}</div>
+                    </div>
+                </div>
+            `)}).join('')}
+        </div>
+    `
+    return markup
+}
+
+
+function template_contact() {
+    let title_contact = CONTACT.title
+    let markup = `
+        <div class="title">${capitalizer(title_contact)}</div>
+        <div class="content">${CONTACT.content}</div>
+    `
     return markup
 }
