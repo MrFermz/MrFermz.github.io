@@ -35,7 +35,7 @@ function template_nav_bar() {
     let markup = `
         <div class="container-nav card">
             ${menuList.map((ele, i) => { return (`
-                <input id="nav-item-${ele}" ${ele == 'home' ? `style="color:orange;"` : ``}
+                <input id="nav-item-${ele}" ${ele == 'home' ? `style="color:#ffc500;"` : ``}
                 ${i == 0 ? `class="nav-item-left"` : i == length - 1 ? `class="nav-item-right"` : `class="nav-item"`}
                 type="button" value="${ele.toUpperCase()}" onclick="changeMenu('${ele}')">
             `)}).join('')}
