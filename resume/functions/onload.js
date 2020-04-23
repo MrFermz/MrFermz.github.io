@@ -74,12 +74,12 @@ function changeMenu(menu) {
     card_portfolio.style.display    = 'none'
     card_contact.style.display      = 'none'
 
-    btn_home.style.color        = 'black'
-    btn_resume.style.color      = 'black'
-    btn_portfolio.style.color   = 'black'
-    btn_contact.style.color     = 'black'
+    btn_home.style.color        = ''
+    btn_resume.style.color      = ''
+    btn_portfolio.style.color   = ''
+    btn_contact.style.color     = ''
 
-    let color = 'orange'
+    let color = '#ffc500'
 
     switch (menu) {
         case 'home'     : { 
