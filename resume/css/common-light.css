@@ -1,5 +1,5 @@
 * {
-    font-family: 'Kanit', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body { 
@@ -7,7 +7,7 @@ body {
     padding: 0px;
     /* background-color: #F8F9F9; */
     /* background-color: gray; */
-    background: url(http://tavonline.net/html/mat/default/images/bg.png);
+    background: url(../assets/bg.png);
 }
 
 .container {
@@ -23,41 +23,50 @@ body {
 
 .container-main {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.container-top {
+.container-main-content {
     display: flex;
     justify-content: center;
 }
 
-.container-left {
-    margin: 10px;
+.container-top {
+    margin-top: 70px;
 }
 
-.card-left {
-    width: 250px;
-    height: 600px;
+.container-left {
+    margin-left: auto;
+    margin-right: 10px;
 }
 
 .container-right {
-    margin: 10px;
+    margin-left: 10px;
+    margin-right: auto;
+}
+
+.card-left {
+    width: 350px;
+    height: 600px;
 }
 
 .container-nav {
     display: flex;
     justify-content: space-around;
-    width: 500px;
+    width: 100%;
     margin-bottom: 20px;
 }
 
 input[type="button"] {
     border: none;
-    padding: 15px 5px;
+    padding: 30px 5px;
     width: 100%;
     font-weight: bold;
     text-align: center;
     background-color: #ffffff;
+    transition: .3s;
 }
 
 input[type="button"]:hover {
@@ -71,7 +80,7 @@ input[type="button"]:focus {
 
 .nav-item-left {
     padding: 15px 5px;
-    width: 100%;
+    /* width: 100%; */
     font-weight: bold;
     text-align: center;
     border-top-left-radius: 5px;
@@ -84,8 +93,10 @@ input[type="button"]:focus {
 }
 
 .container-content {
-    width: 480px;
-    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 650px;
+    padding: 20px;
 }
 
 #content-home {
@@ -107,15 +118,12 @@ input[type="button"]:focus {
 .container-info {
     display: flex;
     flex-direction: column;
-    padding: 10px;
 }
 
-.container-info .avatar {
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
-    border: 1px solid black;
+.container-info img {
+    width: 100%;
+    /* padding-top: 10px; */
+    border-radius: 5px 5px 0 0;
 }
 
 .container-label {
@@ -129,41 +137,325 @@ input[type="button"]:focus {
 }
 
 .content-top {
+    margin-left: auto;
+    margin-right: auto;
     padding: 50px;
-    width: 670px;
-    margin: 20px 10px 10px 10px;
     text-align: center;
 }
 
 .content-footer {
-    padding: 50px;
-    width: 670px;
+    padding: 20px;
+    width: 100%;
     margin: 10px;
     text-align: center;
-    margin: 10px 10px 20px 10px;
+    margin: 20px 0px 20px 0px;
+    background-color: #1e1e1e;
 }
 
 label {
     cursor: text;
 }
 
-@media only screen and (max-width: 800px) {
+.content-footer label {
+    color: #ffff;
+    font-size: 12px;
+}
+
+.title { 
+    font-size: 25px;
+    margin: 10px 0px 10px 0px;
+}
+
+.content {
+    font-size: 14px;
+    text-indent: 50px;
+    margin: 0px 0px 70px 0px;
+}
+
+.container-skill {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.skill-design {
+    width: 50%;
+    padding: 0px 20px 0px 0px;
+}
+
+.skill-coding {
+    width: 50%;
+    padding: 0px 0px 0px 20px;
+}
+
+.content-skill-title {
+    font-size: 14px;
+    margin: 20px 0px 5px 0px;
+}
+
+progress {
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+progress::-webkit-progress-bar {
+    background: lightgray;
+}
+
+progress::-webkit-progress-value {
+    background: orange;
+}
+
+.container-timeline { 
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.timeline-working {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.timeline-education {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.title-timeline {
+    font-size: 20px;
+    padding: 15px 0px 0px 15px;
+}
+
+.container-icon {
+    background-color: orange;
+    height: 20px;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.title-icon {
+    width: 20px;
+}
+
+.container-title {
+    display: flex;
+}
+
+.container-timeline-content ul {
+    margin-left: -40px;
+    margin-top: 0px;
+    list-style: none;
+}
+
+.container-timeline-content li::before {
+    content: "";
+    border: solid 2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    font-size: 8px;
+    margin-left: -30px;
+    font-weight: 400;
+    background: #fff;
+    display: block;
+    position: absolute;
+    margin-top: -1px;
+    color: orange;
+}
+
+.container-timeline-content li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 25px;
+    border-left: 2px solid lightgray;
+    margin-left: 25px;
+}
+
+.container-timeline-content p {
+    color: gray;
+    padding-bottom: 20px;
+    font-size: 13px;
+}
+
+.container-timeline-content span {
+    font-size: 13px;
+}
+
+.container-timeline-content label {
+    margin-top: -6.5px;
+}
+
+.container-hobby {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-bottom: 70px;
+}
+
+.container-hobby .card {
+    flex-grow: 1;
+    padding: 20px;
+    margin: 10px;
+    width: 150px;
+    transition: .3s;
+}
+
+.container-hobby .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container-hobby .card img {
+    width: 40px;
+    margin-bottom: 10px;
+}
+
+.hobby-title {
+    padding: 0px 0px 5px 0px;
+}
+
+.hobby-content {
+    font-size: 13px;
+    color: gray;
+}
+
+.container-port {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.container-port .card {
+    flex-grow: 1;
+    margin: 10px;
+    border-radius: 5px;
+    transition: .3s;
+    width: 150px;
+}
+
+.container-port img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+.container-port .card:hover {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container-port .detail {
+    padding: 10px;
+}
+
+.port-title {
+    padding: 0px 0px 0px 0px;
+}
+
+.port-content {
+    font-size: 13px;
+    color: gray;
+}
+
+.container-detail ul {
+    margin-left: -40px;
+    margin-top: 0px;
+    list-style: none;
+}
+
+.container-detail li::before {
+    content: "";
+    border: solid 2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50px;
+    font-size: 8px;
+    margin-left: -30px;
+    font-weight: 400;
+    background: #fff;
+    display: block;
+    position: absolute;
+    margin-top: -1px;
+    color: orange;
+}
+
+.container-detail li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 25px;
+    border-left: 2px solid lightgray;
+    margin-left: 25px;
+}
+
+.container-detail label {
+    margin-top: -6.5px;
+    margin-bottom: 20px;
+}
+
+.container-info-icon {
+    background-color: orange;
+    height: 20px;
+    width: 20px;
+    padding: 15px;
+    border-radius: 40px;
+}
+
+.container-info-icon img {
+    padding: 0px;
+}
+
+.container-info .container-detail {
+    margin-top: -25px;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 1100px) {
     .container-main {
         flex-direction: column;
     }
 
-    .container-right {
-        display: flex;
+    .container-main-content {
         flex-direction: column;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .content-top {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container-left {
+        /* margin-left: auto; */
+        /* margin-right: auto; */
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .container-right {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    
+    .content-footer {
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .card-left {
         width: 100%;
-        height: 600px;
+        height: 100%;
     }
 
     .container-nav {
-        flex-grow: 1;
+        /* flex-grow: 1; */
         width: auto;
     }
     
@@ -172,11 +464,36 @@ label {
         width: auto;
     }
 
-    .content-top {
+    .container-skill {
+        flex-direction: column;
+    }
+
+    .skill-design {
         width: 100%;
+        padding: 0px;
     }
     
-    .content-footer {
+    .skill-coding {
+        width: 100%;
+        padding: 0px;
+        margin: 40px 0px 0px 0px;
+    }
+
+    .container-timeline {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container-info {
+        width: auto;
+    }
+
+    .timeline-working {
+        width: 100%;
+    }
+
+    .timeline-education {
         width: 100%;
     }
 }
