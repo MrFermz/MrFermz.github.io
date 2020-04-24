@@ -21,8 +21,8 @@ function template_about() {
         <div class="title">${capitalizer(title_hobby)}</div>
         <div class="container-hobby">
             ${HOBBY.content.map((ele, i) => { return (`
-                <div class="card">
-                    <img src="./assets/icons/${ele[0]}.svg">
+                <div id="card-hobby-${i}" class="card">
+                    <i class="${ele[0]}"></i>
                     <div class="hobby-title">${ele[1]}</div>
                     <div class="hobby-content">${ele[2]}</div>
                 </div>
@@ -66,7 +66,7 @@ function template_resume() {
                 <div class="container-timeline-content">
                     <ul>
                     ${TIMELINE.working_title.map((ele, i) => { return (`
-                        <li id="li-working-${i}">
+                        <li class="border-left-light" id="li-working-${i}">
                             <label>${ele[0]}</label>
                             <span>${ele[1]}</span>
                             <p>${ele[2]}</p>
@@ -84,7 +84,7 @@ function template_resume() {
                 </div>
                 <div class="container-timeline-content">
                     ${TIMELINE.education_title.map((ele, i) => { return (`
-                        <li id="li-education-${i}">
+                        <li class="border-left-light" id="li-education-${i}">
                             <label>${ele[0]}</label>
                             <span>${ele[1]}</span>
                             <p>${ele[2]}</p>
@@ -104,7 +104,7 @@ function template_port() {
         <div class="title">${capitalizer(title_port)}</div>
         <div class="container-port">
             ${PORT_CONTENT.port_card.map((ele, i) => { return (`
-                <div class="card">
+                <div id="card-port-${i}" class="card">
                     <img src="./assets/images/${ele[0]}">
                     <div class="detail">
                         <div class="port-title">${ele[1]}</div>
@@ -122,7 +122,13 @@ function template_contact() {
     let title_contact = CONTACT.title
     let markup = `
         <div class="title">${capitalizer(title_contact)}</div>
-        <div class="content">${CONTACT.content}</div>
+        <div class="container-contact">
+            <div class="contact-detail">
+                ${CONTACT.content.map((ele, i) => { return (`
+                    <label>${capitalizer(ele[0])}: ${ele[1]}</label>
+                `)}).join('')}
+            </div>
+        </div>
     `
     return markup
 }
