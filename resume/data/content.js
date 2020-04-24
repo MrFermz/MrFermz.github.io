@@ -2,11 +2,18 @@
 // Info
 const INFO = {
     content :   [
-                    [`title`, `detail`],
-                    [`title`, `detail`],
-                    [`title`, `detail`],
-                    [`title`, `detail`],
+                    [`name`, `Krittanupong Suksai`],
+                    [`birthday`, `04 August 1995`],
+                    [`nickname`, `Ferm`],
                 ]
+}
+
+const INFO_ICON = {
+    social      :   [
+                        [`fab fa-facebook-f fa-lg`, `https://www.facebook.com/Mr.Fermz`],
+                        [`fab fa-twitter fa-lg`, `https://twitter.com/MrFermz`],
+                        [`fab fa-github fa-lg`, `https://github.com/MrFermz`],
+                    ]
 }
 
 
@@ -21,9 +28,9 @@ const ABOUT = {
 const HOBBY = {
     title   :   `hobbies`,
     content :   [
-                    [`work`, `title1`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
-                    [`work`, `title2`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
-                    [`work`, `title3`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
+                    [`fas fa-gamepad fa-3x`, `Play game`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
+                    [`fas fa-music fa-3x`, `Listen to music`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
+                    [`fas fa-code fa-3x`, `Coding`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
                 ]
 }
 
@@ -81,6 +88,8 @@ const PORT_CONTENT = {
 
 // Contact card
 const CONTACT = {
-    title   : `contact`,
-    content : `Players use melee attacks, firearms and explosives to fight enemies,[d] and may run, jump, swim or use vehicles to navigate the world.[e] To accommodate the map's size, the game introduces vehicle types absent in its predecessor Grand Theft Auto IV, such as fixed-wing aircraft.[11] In combat, auto-aim and a cover system may be used as assistance against enemies.[12] Should players take damage, their health meter will gradually regenerate to its halfway point.[f] Players respawn at hospitals when their health depletes.[10] If players commit crimes, law enforcement agencies may respond as indicated by a "wanted" meter in the head-up display (HUD).[13] Stars displayed on the meter indicate the current wanted level (for example, at the maximum five-star level, police helicopters and SWAT teams swarm to lethally dispatch players).[14][g] Law enforcement officers will search for players who leave the wanted vicinity. The meter enters a cool-down mode and eventually recedes when players are hidden from the officers' line of sight that displays on the mini-map.[16][h]`
+    title       :   `contact`,
+    content     :   [
+                        [`email`, `Mr.Fermz@hotmail.com`],
+                    ]
 }
