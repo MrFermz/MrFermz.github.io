@@ -1,115 +1,28 @@
-* {
-    font-family: 'Kanit', sans-serif;
+.dark-mode {
+    background-color: #17202A;
+    color: white;
 }
 
-body { 
-    margin: 0px;
-    padding: 0px;
-    background-color: #F8F9F9;
+.btn-dark {
+    background-color: #212F3D;
 }
 
-.container {
-    display: flex;
-    justify-content: center;
+.card-dark {
+    background-color: #212F3D;
 }
 
-.card {
-    background-color: #ffffff;
-    box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
-    border-radius: 10px;
+.card-dark-sub {
+    background-color: #2C3E50;
 }
 
-.container-left {
-    margin: 10px;
+.content-dark {
+    background-color: #212F3D;
 }
 
-.card-left {
-    width: 250px;
-    height: 600px;
+.border-left-dark {
+    border-left: 2px solid #212F3D;
 }
 
-.container-right {
-    margin: 10px;
-}
-
-.container-nav {
-    display: flex;
-    justify-content: space-around;
-    width: 500px;
-    margin-bottom: 20px;
-}
-
-.nav-item {
-    padding: 15px;
-    width: 100%;
-    font-weight: bold;
-    text-align: center;
-}
-
-.nav-item:hover {
-    color: orange;
-    cursor: pointer;
-}
-
-.container-content {
-    width: 500px;
-}
-
-.container-content p {
-    padding: 10px;
-}
-
-#content-home {
-    display: block;
-}
-
-#content-resume {
-    display: none;
-}
-
-#content-portfolio {
-    display: none;
-}
-
-#content-contact {
-    display: none;
-}
-
-.container-info {
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
-}
-
-.container-info .avatar {
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 50px;
-    border: 1px solid black;
-}
-
-.container-label {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
-}
-
-@media only screen and (max-width: 800px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .card-left {
-        width: 100%;
-        height: 600px;
-    }
-
-    .container-nav {
-        width: 100%;
-    }
-    
-    .container-content {
-        width: 100%;
-    }
+.footer-dark {
+    background-color: 2px solid #808B96;
 }
