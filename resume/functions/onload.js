@@ -1,4 +1,6 @@
-
+var THEME = localStorage.getItem('dark-mode')
+var borderLeftValue  = '2px solid #212F3D'
+var containerNav = 'container-nav'
 
 
 
@@ -6,7 +8,14 @@
 //      [ Onload function ]
 
 function onLoad() {
-    genContent()
+    if (THEME == 'dark') {
+        genContent()
+        toggleClass()
+    } else {
+        borderLeftValue = '2px solid #fff'
+        containerNav = 'container-nav card'
+        genContent()
+    }
 }
 
 
@@ -43,14 +52,15 @@ function genContent() {
     document.getElementById('content-resume').innerHTML         = resume
     document.getElementById('content-portfolio').innerHTML      = portfolio
     document.getElementById('content-contact').innerHTML        = contact
-
+    
+    document.getElementById('container-nav').className          = containerNav
     document.getElementById(`li-working-0`).style.paddingTop    = '40px'
     document.getElementById(`li-education-0`).style.paddingTop  = '40px'
-    document.getElementById(`li-working-${TIMELINE.working_title.length - 1}`).style.borderLeft     = '2px solid white'
-    document.getElementById(`li-education-${TIMELINE.education_title.length - 1}`).style.borderLeft = '2px solid white'
+    document.getElementById(`li-working-${TIMELINE.working_title.length - 1}`).style.borderLeft = borderLeftValue
+    document.getElementById(`li-education-${TIMELINE.education_title.length - 1}`).style.borderLeft = borderLeftValue
 
     document.getElementById(`li-info-0`).style.paddingTop    = '40px'
-    document.getElementById(`li-info-${INFO.content.length - 1}`).style.borderLeft     = '2px solid white'
+    document.getElementById(`li-info-${INFO.content.length - 1}`).style.borderLeft = borderLeftValue
 }
 
 
@@ -105,4 +115,73 @@ function changeMenu(menu) {
         default:
             break
     }
+}
+
+
+function toggleDarkMode(check) {
+    let container_btn   = document.getElementById('container-nav')
+    let leftLineWork    = document.getElementById(`li-working-${TIMELINE.working_title.length - 1}`)
+    let leftLineEdu     = document.getElementById(`li-education-${TIMELINE.education_title.length - 1}`)
+    let leftLineInfo    = document.getElementById(`li-info-${INFO.content.length - 1}`)
+    if (check.checked === true) {
+        localStorage.setItem('dark-mode', 'dark')
+        container_btn.className = 'container-nav'
+        leftLineWork.style.borderLeft = '2px solid #212F3D'
+        leftLineEdu.style.borderLeft = '2px solid #212F3D'
+        leftLineInfo.style.borderLeft = '2px solid #212F3D'
+        toggleClass()
+    } 
+    if (check.checked === false) {
+        localStorage.setItem('dark-mode', 'light')
+        container_btn.className = 'container-nav card'
+        leftLineWork.style.borderLeft = '2px solid #fff'
+        leftLineEdu.style.borderLeft = '2px solid #fff'
+        leftLineInfo.style.borderLeft = '2px solid #fff'
+        toggleClass()
+    }
+}
+
+
+function toggleClass() {
+    // Body
+    let body            = document.body
+    body.classList.toggle('dark-mode')
+
+
+
+    // Button
+    let btn_home        = document.getElementById(`nav-item-home`)
+    let btn_resume      = document.getElementById(`nav-item-resume`)
+    let btn_portfolio   = document.getElementById(`nav-item-portfolio`)
+    let btn_contact     = document.getElementById(`nav-item-contact`)
+    btn_home.classList.toggle('btn-dark')
+    btn_resume.classList.toggle('btn-dark')
+    btn_portfolio.classList.toggle('btn-dark')
+    btn_contact.classList.toggle('btn-dark')
+
+
+
+    // Cards
+    let card        = document.getElementById('card-left')
+    card.classList.toggle('card-dark')
+
+    HOBBY.content.forEach((ele, i) => {
+        document.getElementById(`card-hobby-${i}`).classList.toggle('card-dark-sub')
+    })
+
+    PORT_CONTENT.port_card.forEach((ele, i) => {
+        document.getElementById(`card-port-${i}`).classList.toggle('card-dark-sub')
+    })
+
+
+
+    // Content
+    let content_home    = document.getElementById('content-home')
+    let content_resume  = document.getElementById('content-resume')
+    let content_port    = document.getElementById('content-portfolio')
+    let content_contact = document.getElementById('content-contact')
+    content_home.classList.toggle('content-dark')
+    content_resume.classList.toggle('content-dark')
+    content_port.classList.toggle('content-dark')
+    content_contact.classList.toggle('content-dark')
 }
