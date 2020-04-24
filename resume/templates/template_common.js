@@ -15,7 +15,6 @@ function template_container() {
                 <div id="container-left" class="container-left"></div>
                 <div id="container-right" class="container-right"></div>
             </div>
-            
         </div>
     `
     return markup
@@ -24,7 +23,13 @@ function template_container() {
 
 function template_top_bar() {
     let markup = `
-
+        <div class="container-switch">
+            <label class="switch-label">Dark Theme</label>
+            <label class="switch">
+                <input type="checkbox" ${THEME == 'dark' ? `checked` : ``} onclick="toggleDarkMode(this)">
+                <span class="slider round"></span>
+            </label>
+        </div>
     `
     return markup
 }
@@ -33,11 +38,11 @@ function template_top_bar() {
 function template_nav_bar() {
     let length = menuList.length
     let markup = `
-        <div class="container-nav card">
+        <div id="container-nav" class="container-nav card">
             ${menuList.map((ele, i) => { return (`
-                <input id="nav-item-${ele}" ${ele == 'home' ? `style="color:#ffc500;"` : ``}
+                <div id="nav-item-${ele}" ${ele == 'home' ? `style="color:#ffc500;"` : ``}
                 ${i == 0 ? `class="nav-item-left"` : i == length - 1 ? `class="nav-item-right"` : `class="nav-item"`}
-                type="button" value="${ele.toUpperCase()}" onclick="changeMenu('${ele}')">
+                onclick="changeMenu('${ele}')">${ele.toUpperCase()}</div>
             `)}).join('')}
         </div>
     `
@@ -47,8 +52,9 @@ function template_nav_bar() {
 
 function template_footer_bar() {
     let markup = `
-        <div class="content-footer card">
-            <label>Copyright 2020</label>
+        <div id="container-footer" class="content-footer card">
+            <label>Mr.Fermz.</label>
+            <label>© 2020 All rights reserved.</label>
         </div>
     `
     return markup
