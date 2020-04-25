@@ -6,3 +6,8 @@ function capitalizer(params) {
 function newTab(params) {
     window.open(params)
 }
+
+
+function titleSetter(params) {
+    document.title = `${capitalizer(params)} - Mr.Fermz`
+}
