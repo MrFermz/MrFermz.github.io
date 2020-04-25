@@ -1,13 +1,19 @@
 var THEME = localStorage.getItem('dark-mode')
 var borderLeftValue  = '2px solid #212F3D'
 var containerNav = 'container-nav'
-
+if (localStorage.getItem('lang')) {
+    var LANG = localStorage.getItem('lang')
+} else {
+    localStorage.setItem('lang', 'en')
+    var LANG = localStorage.getItem('lang')
+}
 
 
 
 //      [ Onload function ]
 
 function onLoad() {
+    titleSetter('home')
     if (THEME == 'dark') {
         genContent()
         toggleClass()
@@ -56,11 +62,11 @@ function genContent() {
     document.getElementById('container-nav').className          = containerNav
     document.getElementById(`li-working-0`).style.paddingTop    = '40px'
     document.getElementById(`li-education-0`).style.paddingTop  = '40px'
-    document.getElementById(`li-working-${TIMELINE.working_title.length - 1}`).style.borderLeft = borderLeftValue
-    document.getElementById(`li-education-${TIMELINE.education_title.length - 1}`).style.borderLeft = borderLeftValue
+    document.getElementById(`li-working-${RESUME['en']['working_content'].length - 1}`).style.borderLeft = borderLeftValue
+    document.getElementById(`li-education-${RESUME['en']['education_content'].length - 1}`).style.borderLeft = borderLeftValue
 
     document.getElementById(`li-info-0`).style.paddingTop    = '40px'
-    document.getElementById(`li-info-${INFO.content.length - 1}`).style.borderLeft = borderLeftValue
+    document.getElementById(`li-info-${INFO['content']['en'].length - 1}`).style.borderLeft = borderLeftValue
 }
 
 
@@ -90,6 +96,8 @@ function changeMenu(menu) {
     btn_contact.style.color     = ''
 
     let color = '#ffc500'
+    let title = ''
+    title                           = menu
 
     switch (menu) {
         case 'home'     : { 
@@ -115,14 +123,15 @@ function changeMenu(menu) {
         default:
             break
     }
+    titleSetter(title)
 }
 
 
 function toggleDarkMode(check) {
     let container_btn   = document.getElementById('container-nav')
-    let leftLineWork    = document.getElementById(`li-working-${TIMELINE.working_title.length - 1}`)
-    let leftLineEdu     = document.getElementById(`li-education-${TIMELINE.education_title.length - 1}`)
-    let leftLineInfo    = document.getElementById(`li-info-${INFO.content.length - 1}`)
+    let leftLineWork    = document.getElementById(`li-working-${RESUME[LANG]['working_content'].length - 1}`)
+    let leftLineEdu     = document.getElementById(`li-education-${RESUME[LANG]['education_content'].length - 1}`)
+    let leftLineInfo    = document.getElementById(`li-info-${INFO['content'][LANG].length - 1}`)
     if (check.checked === true) {
         localStorage.setItem('dark-mode', 'dark')
         container_btn.className = 'container-nav'
@@ -165,11 +174,11 @@ function toggleClass() {
     let card        = document.getElementById('card-left')
     card.classList.toggle('card-dark')
 
-    HOBBY.content.forEach((ele, i) => {
+    HOBBY['en']['content'].forEach((ele, i) => {
         document.getElementById(`card-hobby-${i}`).classList.toggle('card-dark-sub')
     })
 
-    PORT_CONTENT.port_card.forEach((ele, i) => {
+    PORT['en']['content'].forEach((ele, i) => {
         document.getElementById(`card-port-${i}`).classList.toggle('card-dark-sub')
     })
 
@@ -184,4 +193,10 @@ function toggleClass() {
     content_resume.classList.toggle('content-dark')
     content_port.classList.toggle('content-dark')
     content_contact.classList.toggle('content-dark')
+}
+
+
+function langSwitcher(lang) {
+    localStorage.setItem('lang', lang)
+    location.reload()
 }

@@ -2,25 +2,25 @@
 
 function template_home() {
     let markup = `
-        ${menuList.map((ele, i) => { return (
-            `<div id="content-${ele}" class="container-content card"></div>`
+        ${MENU_LIST['th'].map((ele, i) => { let eng = MENU_LIST['en'][i]; return (
+            `<div id="content-${eng}" class="container-content card"></div>`
         )}).join('')}`
     return markup
 }
 
 
 function template_about() {
-    let title_about = ABOUT.title
-    let title_hobby = HOBBY.title
-    let title_skill_design = SKILLS.title_design
-    let title_skill_coding = SKILLS.title_coding
+    let title_about = ABOUT[LANG]['title']
+    let title_hobby = HOBBY[LANG]['title']
+    let title_skill_design = SKILLS[LANG]['title_design']
+    let title_skill_coding = SKILLS[LANG]['title_coding']
     let markup = `
         <div class="title">${capitalizer(title_about)}</div>
-        <div class="content">${ABOUT.content}</div>
+        <div class="content">${ABOUT[LANG]['content']}</div>
 
         <div class="title">${capitalizer(title_hobby)}</div>
         <div class="container-hobby">
-            ${HOBBY.content.map((ele, i) => { return (`
+            ${HOBBY[LANG]['content'].map((ele, i) => { return (`
                 <div id="card-hobby-${i}" class="card">
                     <i class="${ele[0]}"></i>
                     <div class="hobby-title">${ele[1]}</div>
@@ -32,14 +32,14 @@ function template_about() {
         <div class="container-skill">
             <div class="skill-design">
                 <div class="title">${capitalizer(title_skill_design)}</div>
-                ${SKILLS.content_design.map((ele, i) => { return (`
+                ${SKILLS[LANG]['content_design'].map((ele, i) => { return (`
                     <div class="content-skill-title">${ele[0]}</div>
                     <progress id="file" value="${ele[1]}" max="100"></progress>
                 `)}).join('')}
             </div>
             <div class="skill-coding">
                 <div class="title">${capitalizer(title_skill_coding)}</div>
-                ${SKILLS.content_coding.map((ele, i) => { return (`
+                ${SKILLS[LANG]['content_coding'].map((ele, i) => { return (`
                     <div class="content-skill-title">${ele[0]}</div>
                     <progress id="file" value="${ele[1]}" max="100"></progress>
                 `)}).join('')}
@@ -51,8 +51,8 @@ function template_about() {
 
 
 function template_resume() {
-    let title_resume = RESUME.title
-    let title_timeline = ['working history', 'Education history']
+    let title_resume = RESUME[LANG]['title']
+    let title_timeline = [RESUME[LANG]['working_title'], RESUME[LANG]['education_title']]
     let markup = `
         <div class="title">${capitalizer(title_resume)}</div>
         <div class="container-timeline">
@@ -65,7 +65,7 @@ function template_resume() {
                 </div>
                 <div class="container-timeline-content">
                     <ul>
-                    ${TIMELINE.working_title.map((ele, i) => { return (`
+                    ${RESUME[LANG]['working_content'].map((ele, i) => { return (`
                         <li class="border-left-light" id="li-working-${i}">
                             <label>${ele[0]}</label>
                             <span>${ele[1]}</span>
@@ -83,7 +83,7 @@ function template_resume() {
                     <label class="title-timeline">${capitalizer(title_timeline[1])}</label>
                 </div>
                 <div class="container-timeline-content">
-                    ${TIMELINE.education_title.map((ele, i) => { return (`
+                    ${RESUME[LANG]['education_content'].map((ele, i) => { return (`
                         <li class="border-left-light" id="li-education-${i}">
                             <label>${ele[0]}</label>
                             <span>${ele[1]}</span>
@@ -99,11 +99,11 @@ function template_resume() {
 
 
 function template_port() {
-    let title_port = PORT.title
+    let title_port = PORT[LANG]['title']
     let markup = `
         <div class="title">${capitalizer(title_port)}</div>
         <div class="container-port">
-            ${PORT_CONTENT.port_card.map((ele, i) => { return (`
+            ${PORT[LANG]['content'].map((ele, i) => { return (`
                 <div id="card-port-${i}" class="card">
                     <img src="./assets/images/${ele[0]}">
                     <div class="detail">
@@ -119,12 +119,12 @@ function template_port() {
 
 
 function template_contact() {
-    let title_contact = CONTACT.title
+    let title_contact = CONTACT[LANG]['title']
     let markup = `
         <div class="title">${capitalizer(title_contact)}</div>
         <div class="container-contact">
             <div class="contact-detail">
-                ${CONTACT.content.map((ele, i) => { return (`
+                ${CONTACT[LANG]['content'].map((ele, i) => { return (`
                     <label>${capitalizer(ele[0])}: ${ele[1]}</label>
                 `)}).join('')}
             </div>

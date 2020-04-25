@@ -1,10 +1,3 @@
-var menuList    =   [
-                        'home',
-                        'resume',
-                        'portfolio',
-                        'contact'
-                    ]
-
 
 
 function template_container() {
@@ -22,13 +15,22 @@ function template_container() {
 
 
 function template_top_bar() {
+    let lang = ['en', 'th']
+    let select = localStorage.getItem('lang')
     let markup = `
-        <div class="container-switch">
-            <label class="switch-label">Dark Theme</label>
-            <label class="switch">
-                <input type="checkbox" ${THEME == 'dark' ? `checked` : ``} onclick="toggleDarkMode(this)">
-                <span class="slider round"></span>
-            </label>
+        <div class="container-corner">
+            <div class="container-lang">
+                ${lang.map((ele, i) => { return (`
+                    <input type="button" value="${ele}" onclick="langSwitcher('${ele}')" ${select == ele ? `disabled` : ``}>
+                `)}).join('')}
+            </div>
+            <div class="container-switch">
+                <label class="switch-label">Dark Theme</label>
+                <label class="switch">
+                    <input type="checkbox" ${THEME == 'dark' ? `checked` : ``} onclick="toggleDarkMode(this)">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
     `
     return markup
@@ -36,13 +38,13 @@ function template_top_bar() {
 
 
 function template_nav_bar() {
-    let length = menuList.length
+    let length = MENU_LIST[LANG].length
     let markup = `
         <div id="container-nav" class="container-nav card">
-            ${menuList.map((ele, i) => { return (`
-                <div id="nav-item-${ele}" ${ele == 'home' ? `style="color:#ffc500;"` : ``}
+            ${MENU_LIST[LANG].map((ele, i) => { let eng = MENU_LIST['en'][i]; return (`
+                <div id="nav-item-${eng}" ${eng == 'home' ? `style="color:#ffc500;"` : ``}
                 ${i == 0 ? `class="nav-item-left"` : i == length - 1 ? `class="nav-item-right"` : `class="nav-item"`}
-                onclick="changeMenu('${ele}')">${ele.toUpperCase()}</div>
+                onclick="changeMenu('${eng}')">${ele.toUpperCase()}</div>
             `)}).join('')}
         </div>
     `

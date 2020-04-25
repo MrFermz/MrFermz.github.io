@@ -12,7 +12,7 @@ function template_info() {
                         </div>
                     </div>
                     <ul>
-                        ${INFO.content.map((ele, i) => { return (`
+                        ${INFO['content'][LANG].map((ele, i) => { return (`
                             <li class="border-left-light" id="li-info-${i}" class="detail">
                                 <label>${capitalizer(ele[0])}: ${ele[1]}</label>
                             </li>
@@ -21,7 +21,7 @@ function template_info() {
                 </div>
             </div>
             <div class="container-info-social">
-                ${INFO_ICON.social.map((ele, i) => { return (`
+                ${INFO['icon'].map((ele, i) => { return (`
                     <label class="social-btn" onclick="newTab('${ele[1]}')"><i class="${ele[0]}"></i></label>
                 `)}).join('')}
             </div>
