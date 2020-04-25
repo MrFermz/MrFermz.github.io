@@ -11,7 +11,7 @@ function template_info() {
                             <img class="title-icon" src="./assets/icons/glasses.svg">
                         </div>
                     </div>
-                    <ul>
+                    <ul class="container-group">
                         ${INFO['content'][LANG].map((ele, i) => { return (`
                             <li class="border-left-light" id="li-info-${i}" class="detail">
                                 <label>${capitalizer(ele[0])}: ${ele[1]}</label>

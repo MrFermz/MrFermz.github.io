@@ -62,11 +62,8 @@ function genContent() {
     document.getElementById('container-nav').className          = containerNav
     document.getElementById(`li-working-0`).style.paddingTop    = '40px'
     document.getElementById(`li-education-0`).style.paddingTop  = '40px'
-    document.getElementById(`li-working-${RESUME['en']['working_content'].length - 1}`).style.borderLeft = borderLeftValue
-    document.getElementById(`li-education-${RESUME['en']['education_content'].length - 1}`).style.borderLeft = borderLeftValue
 
     document.getElementById(`li-info-0`).style.paddingTop    = '40px'
-    document.getElementById(`li-info-${INFO['content']['en'].length - 1}`).style.borderLeft = borderLeftValue
 }
 
 
@@ -174,12 +171,16 @@ function toggleClass() {
     let card        = document.getElementById('card-left')
     card.classList.toggle('card-dark')
 
-    HOBBY['en']['content'].forEach((ele, i) => {
+    HOBBY[LANG]['content'].forEach((ele, i) => {
         document.getElementById(`card-hobby-${i}`).classList.toggle('card-dark-sub')
     })
 
-    PORT['en']['content'].forEach((ele, i) => {
+    PORT[LANG]['content'].forEach((ele, i) => {
         document.getElementById(`card-port-${i}`).classList.toggle('card-dark-sub')
+    })
+
+    EXP[LANG]['content'].forEach((ele, i) => {
+        document.getElementById(`card-exp-${i}`).classList.toggle('card-dark-sub')
     })
 
 

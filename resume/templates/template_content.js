@@ -53,6 +53,7 @@ function template_about() {
 function template_resume() {
     let title_resume = RESUME[LANG]['title']
     let title_timeline = [RESUME[LANG]['working_title'], RESUME[LANG]['education_title']]
+    let title_exp = EXP[LANG]['title']
     let markup = `
         <div class="title">${capitalizer(title_resume)}</div>
         <div class="container-timeline">
@@ -64,7 +65,7 @@ function template_resume() {
                     <label class="title-timeline">${capitalizer(title_timeline[0])}</label>
                 </div>
                 <div class="container-timeline-content">
-                    <ul>
+                    <ul class="container-group">
                     ${RESUME[LANG]['working_content'].map((ele, i) => { return (`
                         <li class="border-left-light" id="li-working-${i}">
                             <label>${ele[0]}</label>
@@ -83,14 +84,25 @@ function template_resume() {
                     <label class="title-timeline">${capitalizer(title_timeline[1])}</label>
                 </div>
                 <div class="container-timeline-content">
-                    ${RESUME[LANG]['education_content'].map((ele, i) => { return (`
-                        <li class="border-left-light" id="li-education-${i}">
-                            <label>${ele[0]}</label>
-                            <span>${ele[1]}</span>
-                            <p>${ele[2]}</p>
-                        </li>
-                    `)}).join('')}
+                    <ul class="container-group">
+                        ${RESUME[LANG]['education_content'].map((ele, i) => { return (`
+                            <li class="border-left-light" id="li-education-${i}">
+                                <label>${ele[0]}</label>
+                                <span>${ele[1]}</span>
+                                <p>${ele[2]}</p>
+                            </li>
+                        `)}).join('')}
+                    </ul>
                 </div>
+            </div>
+        </div>
+
+        <div class="container-exp">
+            <div class="title">${capitalizer(title_exp)}</div>
+            <div class="container-exp-sub">
+                ${EXP[LANG]['content'].map((ele, i) => { return (`
+                        <label id="card-exp-${i}" class="card">${ele}</label>
+                `)}).join('')}
             </div>
         </div>
     `
@@ -105,10 +117,11 @@ function template_port() {
         <div class="container-port">
             ${PORT[LANG]['content'].map((ele, i) => { return (`
                 <div id="card-port-${i}" class="card">
-                    <img src="./assets/images/${ele[0]}">
+                    ${ele[0] == `` ? `` : `<img src="./assets/images/${ele[0]}">`}
                     <div class="detail">
                         <div class="port-title">${ele[1]}</div>
                         <div class="port-content">${ele[2]}</div>
+                        <label class="link-btn" onclick="newTab('${ele[4]}')"><i class="${ele[3]}"></i></label>
                     </div>
                 </div>
             `)}).join('')}

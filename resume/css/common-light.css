@@ -133,7 +133,7 @@ input:checked + .slider:before {
 }
 
 .card-left {
-    width: 280px;
+    width: 300px;
     height: 600px;
 }
 
@@ -151,7 +151,7 @@ input:checked + .slider:before {
     border: none;
     padding: 30px 5px;
     width: 100%;
-    font-weight: bold;
+    /* font-weight: bold; */
     text-align: center;
     background-color: #ffffff;
     /* -webkit-transition: .3s; */
@@ -302,7 +302,7 @@ progress {
 }
 
 progress::-webkit-progress-bar {
-    background: lightgray;
+    background: none;
 }
 
 progress::-webkit-progress-value {
@@ -404,6 +404,15 @@ progress::-webkit-progress-value {
     border-left: 2px solid lightgray;
 }
 
+.container-group li:last-child {
+    border: none;
+    margin-left: 26.5px;
+}
+
+.container-group li {
+    padding-right: 10px;
+}
+
 .border-left-light-hide {
     border-left: 2px solid white;
 }
@@ -486,10 +495,16 @@ progress::-webkit-progress-value {
     flex-grow: 1;
     margin: 10px;
     border-radius: 5px;
-    width: 150px;
+    width: 200px;
     /* -webkit-transition: .3s; */
     /* -o-transition: .3s; */
     /* transition: .3s; */
+}
+
+.container-port .card:last-child {
+    flex-grow: 1;
+    -webkit-box-flex: 1;
+    height: 0px;
 }
 
 .container-port img {
@@ -500,6 +515,11 @@ progress::-webkit-progress-value {
 .container-port .card:hover {
     -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container-port .card:last-child:hover {
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .container-port .detail {
@@ -513,6 +533,7 @@ progress::-webkit-progress-value {
 .port-content {
     font-size: 13px;
     color: gray;
+    margin-bottom: 10px;
 }
 
 .container-detail ul {
@@ -608,6 +629,11 @@ progress::-webkit-progress-value {
     cursor: pointer;
 }
 
+.link-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .container-corner {
     display: flex;
     flex-direction: column;
@@ -633,10 +659,32 @@ progress::-webkit-progress-value {
 
 .container-lang input:hover {
     background-color: #ffd037;
+    cursor: pointer;
 }
 
 .container-lang input:focus {
     outline: none;
+}
+
+.container-exp {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-exp-sub {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container-exp .card:hover {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.container-exp label {
+    width: 150px;
+    padding: 10px;
+    margin-right: 10px;
 }
 
 @media only screen and (max-width: 1100px) {

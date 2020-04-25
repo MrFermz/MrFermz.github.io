@@ -82,27 +82,29 @@ const SKILLS = {
     en : {
         title_design        :   `design skills`,
         content_design      :   [
-                                    [`content_design 1`, 40],
-                                    [`content_design 4`, 75],
+                                    [`HTML`, 50],
+                                    [`CSS`, 65],
                                 ],
         title_coding        :   `coding skills`,
         content_coding      :   [
-                                    [`content_coding 1`, 50],
-                                    [`content_coding 3`, 60],
-                                    [`content_coding 4`, 80],
+                                    [`JavaScript`, 80],
+                                    [`Python`, 50],
+                                    [`Java`, 35],
+                                    [`C++`, 35],
                                 ]
     },
     th : {
         title_design        :   `ทักษะการออกแบบ`,
         content_design      :   [
-                                    [`ทักษะการออกแบบ 1`, 40],
-                                    [`ทักษะการออกแบบ 4`, 75],
+                                    [`HTML`, 50],
+                                    [`CSS`, 65],
                                 ],
         title_coding        :   `ทักษะการเขียนโค้ด`,
         content_coding      :   [
-                                    [`ทักษะการเขียนโค้ด 1`, 50],
-                                    [`ทักษะการเขียนโค้ด 3`, 60],
-                                    [`ทักษะการเขียนโค้ด 4`, 80],
+                                    [`JavaScript`, 80],
+                                    [`Python`, 50],
+                                    [`Java`, 35],
+                                    [`C++`, 35],
                                 ]
     }
 }
@@ -115,33 +117,47 @@ const RESUME = {
         title               : `resume`,
         working_title       :   `working history`,
         working_content     :   [
-            [`working_title 1`, `2020`, `The single-player mode lets players control three characters`],
-            [`working_title 2`, `2021`, `Each character has a set of eight skills that represent their`],
-        ],        
+            [`Internship`, `2019`, `YGGDrazil Group Co.,LTD`],
+            [`-`, ``, ``],
+        ],
         education_title     :   `education history`,
         education_content   :   [
-            [`education_title 1`, `2020`, `The single-player mode lets players control three characters`],
-            [`education_title 2`, `2021`, `Each character has a set of eight skills that represent their`],
-            [`education_title 3`, `2022`, `While free-roaming the game world, players may engage `],
-            [`education_title 3`, `2022`, `While free-roaming the game world, players may engage in`],
+            [`University`, `2020`, `Rajamangala University of Technology Srivijaya Nakhon Si Thammarat Saiyai`],
+            [`High school`, `??`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
+            [`Middle school`, `??`, `Kanjanapisek Wittayalai Krabi School`]
         ]
     },
     th : {
         title               : `ประวัติ`,
         working_title       :   `ประวัติการทำงาน`,
         working_content     :   [
-            [`การทำงาน 1`, `2563`, `ทดสอบ`],
-            [`การทำงาน 2`, `2564`, `ทดสอบ`],
+            [`ฝึกงาน`, `2562`, `YGGDrazil Group Co.,LTD`],
+            [`-`, ``, ``],
         ],
         education_title     :   `ประวัติการศึกษา`,
         education_content   :   [
-            [`การศึกษา 1`, `2563`, `ทดสอบ`],
-            [`การศึกษา 2`, `2564`, `ทดสอบ`],
-            [`การศึกษา 3`, `2565`, `ทดสอบ`],
-            [`การศึกษา 3`, `2566`, `ทดสอบ`],
+            [`มหาวิทยาลัย`, `2562`, `มหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย วิทยาเขตนครศรีธรรมราช ไสใหญ่`],
+            [`มัธยมปลาย`, `??`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
+            [`มัธยมต้น`, `??`, `โรงเรียนกาญจนาภิเษกวิทยาลัย กระบี่`],
         ]
     }
+}
 
+const EXP = {
+    en : {
+        title   : `experience`,
+        content : [
+            [`ACM ICPC 2017`],
+            [`STARTUP THAILAND SONGKHLA 2017`],
+        ]
+    },
+    th : {
+        title   : `ประสบการณ์`,
+        content : [
+            [`ACM ICPC 2017`],
+            [`STARTUP THAILAND SONGKHLA 2017`],
+        ]
+    }
 }
 
 
@@ -151,21 +167,19 @@ const PORT = {
     en : {
         title   : `portfolio`,
         content : [
-            [`port.jpg`, `title`, `short_detail`],
-            [`port.jpg`, `title`, `short_detail`],
-            [`port.jpg`, `title`, `short_detail`],
-            [`port.jpg`, `title`, `short_detail`],
-            [`port.jpg`, `title`, `short_detail`],
+            [`leaveapp.png`, `Leave Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/leaveApp`],
+            [`riceapp.png`, `Rice Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/rice-app`],
+            [`actlog.png`, `Activity log App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/ACTLOG`],
+            [``, ``, ``, ``, ``],
         ]
     },
     th : {
         title   : `ผลงาน`,
         content : [
-            [`port.jpg`, `ชื่อผลงาน`, `คำอธิบาย`],
-            [`port.jpg`, `ชื่อผลงาน`, `คำอธิบาย`],
-            [`port.jpg`, `ชื่อผลงาน`, `คำอธิบาย`],
-            [`port.jpg`, `ชื่อผลงาน`, `คำอธิบาย`],
-            [`port.jpg`, `ชื่อผลงาน`, `คำอธิบาย`],
+            [`leaveapp.png`, `Leave Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/leaveApp`],
+            [`riceapp.png`, `Rice Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/rice-app`],
+            [`actlog.png`, `Activity log App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/ACTLOG`],
+            [``, ``, ``, ``, ``],
         ]
     }
 
