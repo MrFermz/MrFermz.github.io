@@ -2,13 +2,14 @@
 
 function template_container() {
     let markup = `
-        <div class="container-main">
+        <div id="container-main" class="container-main">
             <div id="container-top" class="container-top"></div>
             <div class="container-main-content">
                 <div id="container-left" class="container-left"></div>
                 <div id="container-right" class="container-right"></div>
             </div>
         </div>
+        <div id="container-modal" class="container-modal" tabindex="0" onkeydown="onKeyDown(event)"></div>
     `
     return markup
 }
@@ -56,7 +57,7 @@ function template_footer_bar() {
     let markup = `
         <div id="container-footer" class="content-footer card">
             <label>Mr.Fermz.</label>
-            <label>© 2020 All rights reserved.</label>
+            <label>© ${new Date().getFullYear()} All rights reserved.</label>
         </div>
     `
     return markup

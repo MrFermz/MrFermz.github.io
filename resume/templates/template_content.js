@@ -1,3 +1,6 @@
+var LENGTH_MAX
+
+
 
 
 function template_home() {
@@ -60,7 +63,7 @@ function template_resume() {
             <div class="timeline-working">
                 <div class="container-title">
                     <div class="container-icon">
-                        <img class="title-icon" src="./assets/icons/work.svg">
+                        <i id="icon-working" class="fas fa-briefcase"></i>
                     </div>
                     <label class="title-timeline">${capitalizer(title_timeline[0])}</label>
                 </div>
@@ -79,7 +82,7 @@ function template_resume() {
             <div class="timeline-education">
                 <div class="container-title">
                     <div class="container-icon">
-                        <img class="title-icon" src="./assets/icons/graduate.svg">
+                        <i id="icon-education" class="fas fa-graduation-cap"></i>
                     </div>
                     <label class="title-timeline">${capitalizer(title_timeline[1])}</label>
                 </div>
@@ -116,12 +119,18 @@ function template_port() {
         <div class="title">${capitalizer(title_port)}</div>
         <div class="container-port">
             ${PORT[LANG]['content'].map((ele, i) => { return (`
-                <div id="card-port-${i}" class="card">
-                    ${ele[0] == `` ? `` : `<img src="./assets/images/${ele[0]}">`}
+                <div id="card-port-${i}" class="card card-port">
+                    ${ele[0].length == 0 ? `` : `<img src="./assets/images/port${i}/${ele[0][0]}.png" onclick="toggleModal(${i})" class="port-img">`}
+                    <div class="more" onclick="toggleModal(${i})">
+                        <span class="fa-stack fa-2x">
+                            <i id="icon-bg" class="fas fa-circle fa-stack-2x"></i>
+                            <i id="icon" class="fas fa-search fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </div>
                     <div class="detail">
                         <div class="port-title">${ele[1]}</div>
                         <div class="port-content">${ele[2]}</div>
-                        <label class="link-btn" onclick="newTab('${ele[4]}')"><i class="${ele[3]}"></i></label>
+                        <div class="container-link"><i class="${ele[3]} link-btn" onclick="newTab('${ele[4]}')"></i></div>
                     </div>
                 </div>
             `)}).join('')}
@@ -140,6 +149,41 @@ function template_contact() {
                 ${CONTACT[LANG]['content'].map((ele, i) => { return (`
                     <label>${capitalizer(ele[0])}: ${ele[1]}</label>
                 `)}).join('')}
+            </div>
+        </div>
+    `
+    return markup
+}
+
+
+function templateModal(index) {
+    var content = []
+    var images = []
+    if (index >= 0) { //index only result is > 0 or true only.
+        content = PORT[LANG]['content'][index]
+        images = content[0]
+        LENGTH_MAX = content[0].length
+    }
+    let markup = `
+        <div id="modal-content" class="modal-content">
+            <div class="modal-container-content">
+                <div class="modal-top">
+                    <div class="modal-remain-container">
+                        <span id="modal-remain-count">1</span>/${LENGTH_MAX}
+                    </div>
+                </div>
+                <div class="modal-close-container">
+                    <span class="modal-close" onclick="toggleModal()"><i class="fas fa-times fa-lg icon"></i></span>
+                </div>
+                <div class="content">
+                    ${images.map((ele, i) => { return (`
+                        <img id="modal-img-${i}" src="./assets/images/port${index}/${ele}.png">
+                    `)}).join('')}
+                </div>
+                <div class="container-arrow">
+                    <span class="modal-previous" onclick="previousImage()"><i class="fas fa-arrow-left fa-lg icon"></i></span>
+                    <span class="modal-next" onclick="nextImage()"><i class="fas fa-arrow-right fa-lg icon"></i></span>
+                </div>
             </div>
         </div>
     `
