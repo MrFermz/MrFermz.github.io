@@ -115,12 +115,12 @@ const SKILLS = {
 const RESUME = {
     en : {
         title               : `resume`,
-        working_title       :   `working history`,
+        working_title       :   `working`,
         working_content     :   [
-            [`Internship`, `2019`, `YGGDrazil Group Co.,LTD`],
+            [`Internship`, `2019`, `YGGDrazil Group Co.,LTD<br>I'm trained in-house Software engineer.`],
             [`-`, ``, ``],
         ],
-        education_title     :   `education history`,
+        education_title     :   `education`,
         education_content   :   [
             [`University`, `2020`, `Rajamangala University of Technology Srivijaya Nakhon Si Thammarat Saiyai`],
             [`High school`, `??`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
@@ -129,12 +129,12 @@ const RESUME = {
     },
     th : {
         title               : `ประวัติ`,
-        working_title       :   `ประวัติการทำงาน`,
+        working_title       :   `การทำงาน`,
         working_content     :   [
-            [`ฝึกงาน`, `2562`, `YGGDrazil Group Co.,LTD`],
+            [`ฝึกงาน`, `2562`, `YGGDrazil Group Co.,LTD<br>ได้ฝึกงานในหน้าที่ซอฟต์แวร์เอ็นจิเนียภายในบริษัท`],
             [`-`, ``, ``],
         ],
-        education_title     :   `ประวัติการศึกษา`,
+        education_title     :   `การศึกษา`,
         education_content   :   [
             [`มหาวิทยาลัย`, `2562`, `มหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย วิทยาเขตนครศรีธรรมราช ไสใหญ่`],
             [`มัธยมปลาย`, `??`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
@@ -167,22 +167,57 @@ const PORT = {
     en : {
         title   : `portfolio`,
         content : [
-            [`leaveapp.png`, `Leave Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/leaveApp`],
-            [`riceapp.png`, `Rice Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/rice-app`],
-            [`actlog.png`, `Activity log App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/ACTLOG`],
+            [
+                [`leaveapp0`, `leaveapp1`, `leaveapp2`, `leaveapp3`], 
+                `Leave Web App`, 
+                `Front-end and Back-end`, 
+                `fas fa-link fa-sm`, 
+                `https://github.com/MrFermz/leaveApp`
+            ],
+            [
+                [`riceapp0`, `riceapp1`, `riceapp2`],
+                `Rice Web App`, 
+                `Front-end and Back-end`, 
+                `fas fa-link fa-sm`, 
+                `https://github.com/MrFermz/rice-app`
+            ],
+            [
+                [`actlog0`, `actlog1`],
+                `Activity log App`, 
+                `Front-end and Back-end`, 
+                `fas fa-link fa-sm`, 
+                `https://github.com/MrFermz/ACTLOG`
+            ],
             [``, ``, ``, ``, ``],
         ]
     },
     th : {
         title   : `ผลงาน`,
         content : [
-            [`leaveapp.png`, `Leave Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/leaveApp`],
-            [`riceapp.png`, `Rice Web App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/rice-app`],
-            [`actlog.png`, `Activity log App`, `Front-end and Back-end`, `fas fa-link fa-sm`, `https://github.com/MrFermz/ACTLOG`],
+            [
+                [`leaveapp0`, `leaveapp1`, `leaveapp2`, `leaveapp3`], 
+                `Leave Web App`, 
+                `Front-end and Back-end`, 
+                `fas fa-link fa-sm`, 
+                `https://github.com/MrFermz/leaveApp`
+            ],
+            [
+                [`riceapp0`, `riceapp1`, `riceapp2`],
+                `Rice Web App`, 
+                `Front-end and Back-end`, 
+                `fas fa-link fa-sm`, 
+                `https://github.com/MrFermz/rice-app`
+            ],
+            [
+                [`actlog0`, `actlog1`],
+                `Activity log App`, 
+                `Front-end and Back-end`, 
+                `fas fa-link fa-sm`, 
+                `https://github.com/MrFermz/ACTLOG`
+            ],
             [``, ``, ``, ``, ``],
         ]
     }
-
 }
 
 
