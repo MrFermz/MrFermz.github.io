@@ -196,12 +196,10 @@ async function toggleModal(content_length) {
 
 function nextImage() {
     let length = LENGTH_MAX
-    console.log(`Before next: ${COUNT_NEXT_PREVIOUS}`)
     for (let i = 0; i < length; i++) {
         document.getElementById(`modal-img-${i}`).style.display = 'none'
     }
     COUNT_NEXT_PREVIOUS += 1
-    console.log(COUNT_NEXT_PREVIOUS, length - 1)
     if (COUNT_NEXT_PREVIOUS > length - 1) {
         COUNT_NEXT_PREVIOUS = 0
         document.getElementById(`modal-remain-count`).innerText = COUNT_NEXT_PREVIOUS + 1
@@ -215,12 +213,10 @@ function nextImage() {
 
 function previousImage() {
     let length = LENGTH_MAX
-    console.log(`Before previous: ${COUNT_NEXT_PREVIOUS}`)
     for (let i = 0; i < length; i++) {
         document.getElementById(`modal-img-${i}`).style.display = 'none'
     }
     COUNT_NEXT_PREVIOUS -= 1
-    console.log(COUNT_NEXT_PREVIOUS, length - 1)
     if (COUNT_NEXT_PREVIOUS < 0) {
         COUNT_NEXT_PREVIOUS = length - 1
         document.getElementById(`modal-remain-count`).innerText = COUNT_NEXT_PREVIOUS + 1
@@ -235,7 +231,6 @@ function previousImage() {
 
 
 function onKeyDown(event) {
-    console.log(event.keyCode)
     switch (event.keyCode) {
         case 39: nextImage()
             break
