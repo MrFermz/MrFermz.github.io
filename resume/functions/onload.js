@@ -7,7 +7,6 @@ if (localStorage.getItem('lang')) {
     localStorage.setItem('lang', 'en')
     var LANG = localStorage.getItem('lang')
 }
-var COUNT_NEXT_PREVIOUS = 0
 
 
 
