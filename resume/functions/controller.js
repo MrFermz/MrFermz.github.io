@@ -80,7 +80,6 @@ function changeMenu(menu) {
 //      [Toggle dark theme]
 
 function toggleDarkMode(check) {
-    console.log(INFO['content'][LANG].length - 1)
     let container_btn   = document.getElementById('container-nav')
     if (check.checked === true) {
         localStorage.setItem('dark-mode', 'dark')
