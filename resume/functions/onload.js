@@ -71,6 +71,3 @@ function genContent() {
 
     document.getElementById(`li-info-0`).style.paddingTop    = '40px'
 }
-
-
-document.getElementById('container-modal').autofocus
