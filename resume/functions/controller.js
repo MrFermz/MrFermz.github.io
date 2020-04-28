@@ -80,24 +80,17 @@ function changeMenu(menu) {
 //      [Toggle dark theme]
 
 function toggleDarkMode(check) {
+    console.log(INFO['content'][LANG].length - 1)
     let container_btn   = document.getElementById('container-nav')
-    let leftLineWork    = document.getElementById(`li-working-${RESUME[LANG]['working_content'].length - 1}`)
-    let leftLineEdu     = document.getElementById(`li-education-${RESUME[LANG]['education_content'].length - 1}`)
-    let leftLineInfo    = document.getElementById(`li-info-${INFO['content'][LANG].length - 1}`)
     if (check.checked === true) {
         localStorage.setItem('dark-mode', 'dark')
         container_btn.className = 'container-nav'
-        leftLineWork.style.borderLeft = '2px solid #212F3D'
-        leftLineEdu.style.borderLeft = '2px solid #212F3D'
-        leftLineInfo.style.borderLeft = '2px solid #212F3D'
         toggleClass()
     } 
     if (check.checked === false) {
+        let border_left = '0'
         localStorage.setItem('dark-mode', 'light')
         container_btn.className = 'container-nav card'
-        leftLineWork.style.borderLeft = '2px solid #fff'
-        leftLineEdu.style.borderLeft = '2px solid #fff'
-        leftLineInfo.style.borderLeft = '2px solid #fff'
         toggleClass()
     }
 }
