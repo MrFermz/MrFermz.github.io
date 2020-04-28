@@ -169,7 +169,7 @@ function templateModal(index) {
             <div class="modal-container-content">
                 <div class="modal-top">
                     <div class="modal-remain-container">
-                        <span id="modal-remain-count">1</span>/${LENGTH_MAX}
+                        <span id="modal-remain-count">1</span><span> of ${LENGTH_MAX}</span>
                     </div>
                 </div>
                 <div class="modal-close-container">
