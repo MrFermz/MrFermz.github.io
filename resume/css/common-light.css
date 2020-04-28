@@ -6,6 +6,8 @@ body {
     margin: 0px;
     padding: 0px;
     background: url(../assets/bg.png);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -53,9 +55,15 @@ body {
 }
 
 .container-switch {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .container-switch .switch {
@@ -73,6 +81,7 @@ body {
 
 .slider {
     position: absolute;
+    cursor: -webkit-grab;
     cursor: grab;
     top: 0;
     left: 0;
@@ -80,6 +89,7 @@ body {
     bottom: 0;
     background-color: #808B96;
     -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -92,6 +102,7 @@ body {
     bottom: 4px;
     background-color: white;
     -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -100,7 +111,8 @@ input:checked + .slider {
 }
   
 input:focus + .slider {
-    box-shadow: 0 0 1px #ffc500;
+    -webkit-box-shadow: 0 0 1px #ffc500;
+            box-shadow: 0 0 1px #ffc500;
 }
 
 input:checked + .slider:before {
@@ -151,12 +163,8 @@ input:checked + .slider:before {
     border: none;
     padding: 30px 5px;
     width: 100%;
-    /* font-weight: bold; */
     text-align: center;
     background-color: #ffffff;
-    /* -webkit-transition: .3s; */
-    /* -o-transition: .3s; */
-    /* transition: .3s; */
 }
 
 .nav-item:hover, .nav-item-left:hover, .nav-item-right:hover {
@@ -227,8 +235,12 @@ input:checked + .slider:before {
 }
 
 .container-footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     
 }
 
@@ -246,9 +258,15 @@ input:checked + .slider:before {
     text-align: center;
     margin: 20px 0px 20px 0px;
     background-color: #1e1e1e;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 label {
@@ -452,9 +470,6 @@ progress::-webkit-progress-value {
     padding: 20px;
     margin: 10px;
     width: 150px;
-    /* -webkit-transition: .3s; */
-    /* -o-transition: .3s; */
-    /* transition: .3s; */
 }
 
 .container-hobby .card:hover {
@@ -500,7 +515,8 @@ progress::-webkit-progress-value {
 }
 
 .container-port .card:last-child {
-    flex-grow: 1;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
     -webkit-box-flex: 1;
     height: 0px;
 }
@@ -508,12 +524,18 @@ progress::-webkit-progress-value {
 .container-port img {
     border-radius: 5px 5px 0 0;
     width: 100%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
-    transform: scale(1.0);    
+    -webkit-transform: scale(1.0);
+        -ms-transform: scale(1.0);
+            transform: scale(1.0);    
 }
 
 .container-port img:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+            transform: scale(1.05);
     cursor: pointer;
 }
 
@@ -540,7 +562,11 @@ progress::-webkit-progress-value {
     display: none;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -100%);
+    -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+            transform: translate(-50%, -100%);
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
     text-shadow: 2px 2px rgba(0,0,0,0.2);
 }
@@ -636,13 +662,22 @@ progress::-webkit-progress-value {
 }
 
 .container-contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .contact-detail {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     padding: 5px;
 }
 
@@ -651,9 +686,14 @@ progress::-webkit-progress-value {
 }
 
 .container-info-social {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: flex-end;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
     padding: 5px 0 20px 0;
 }
 
@@ -662,8 +702,12 @@ progress::-webkit-progress-value {
 }
 
 .container-link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: flex-end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
 }
 
 .container-link i {
@@ -674,6 +718,8 @@ progress::-webkit-progress-value {
     padding: 10px;
     background-color: lightgray;
     border-radius: 50px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -683,9 +729,16 @@ progress::-webkit-progress-value {
 }
 
 .container-corner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+            align-items: flex-end;
 }
 
 .container-lang {
@@ -715,13 +768,21 @@ progress::-webkit-progress-value {
 }
 
 .container-exp {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .container-exp-sub {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
 }
 
 .container-exp .card:hover {
@@ -752,17 +813,28 @@ progress::-webkit-progress-value {
 }
 
 .modal-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
     height: 100%;
 }
 
 .modal-bottom {
     display: none;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
     background-color: lightgray;
     padding: 10px 0 10px 0;
     position: fixed;
@@ -770,9 +842,15 @@ progress::-webkit-progress-value {
 }
 
 .modal-bottom-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+            align-items: flex-start;
 }
 
 .modal-bottom-2 span {
@@ -781,9 +859,15 @@ progress::-webkit-progress-value {
 }
 
 .modal-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
     text-align: center;
     position: absolute;
     width: 100%;
@@ -792,16 +876,25 @@ progress::-webkit-progress-value {
 
 .modal-remain-container {
     background-color: lightgray;
-    width: 50px;
     border-radius: 50px;
     margin: 0 auto 0 auto;
+    padding: 0 10px 0 10px;
 }
 
 .modal-close-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+            align-items: flex-end;
     position: absolute;
     width: 100%;
     margin-top: 10px;
@@ -812,27 +905,43 @@ progress::-webkit-progress-value {
 }
 
 .modal-container-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+            flex-direction: column;
     margin-top: 20px;
+    height: 100%;
 }
 
 .container-arrow {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+            align-items: center;
     position: absolute;
     width: 100%;
-    top: 30%;
+    top: 50%;
 }
 
 .content img {
     display: none;
     width: 100%;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .content img:first-child {
     display: block;
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .modal-close {
@@ -842,6 +951,8 @@ progress::-webkit-progress-value {
     border-radius: 50px;
     background-color: #ffd037;
     margin-right: 20px;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -856,6 +967,8 @@ progress::-webkit-progress-value {
     height: 35px;
     border-radius: 50px;
     background-color: #ffd037;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
     transition: .3s;
 }
 
@@ -878,6 +991,8 @@ progress::-webkit-progress-value {
 
 .content {
     margin: auto;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
