@@ -192,6 +192,13 @@ input:checked + .slider:before {
     flex-direction: column;
     width: 650px;
     padding: 20px;
+    -webkit-animation: opacity .3s ease-out;
+            animation: opacity .3s ease-out;
+}
+
+.container-content .content {
+    margin: 0;
+    margin-bottom: 60px;
 }
 
 #content-home {
@@ -806,6 +813,8 @@ progress::-webkit-progress-value {
     height: 100%;
     overflow: auto;
     background-color: #fff;
+    -webkit-animation: opacity .3s ease-out;
+            animation: opacity .3s ease-out;
 }
 
 .container-modal:focus {
@@ -1101,4 +1110,14 @@ progress::-webkit-progress-value {
     .timeline-education {
         width: 100%;
     }
+}
+
+@-webkit-keyframes opacity {
+    0% { opacity: 0; }   
+  100% { opacity: 1; }
+}
+
+@keyframes opacity {
+    0% { opacity: 0; }   
+  100% { opacity: 1; }
 }
