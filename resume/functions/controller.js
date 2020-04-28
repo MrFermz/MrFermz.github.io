@@ -1,3 +1,8 @@
+
+
+var COUNT_NEXT_PREVIOUS = 0
+
+
 // window.onclick = function (event) {
 //     let modal                   = document.getElementById('modal-content')
 //     let body                    = document.body
