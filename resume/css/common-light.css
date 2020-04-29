@@ -297,7 +297,7 @@ label {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
 }
 
 .skill-design {
@@ -315,13 +315,14 @@ label {
     margin: 20px 0px 5px 0px;
 }
 
-progress[value] {
+progress {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
     border: none;
     width: 100%;
-  }
+    background-color: transparent;
+}
 
 progress::-webkit-progress-bar {
     background: none;
@@ -345,6 +346,7 @@ progress::-moz-progress-bar {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    margin-bottom: 70px;
 }
 
 .timeline-working {
@@ -480,6 +482,7 @@ progress::-moz-progress-bar {
     padding: 20px;
     margin: 10px;
     width: 150px;
+    height: 160px;
 }
 
 .container-hobby .card:hover {
@@ -532,7 +535,6 @@ progress::-moz-progress-bar {
 }
 
 .container-port img {
-    border-radius: 5px 5px 0 0;
     width: 100%;
     -webkit-transition: .3s;
     -o-transition: .3s;
@@ -565,6 +567,20 @@ progress::-moz-progress-bar {
 
 .card-port {
     position: relative;
+}
+
+.container-port-img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 230px;
+    background-color: #fff;
 }
 
 .more {
@@ -707,8 +723,9 @@ progress::-moz-progress-bar {
     padding: 5px 0 20px 0;
 }
 
-.social-btn {
+.social-btn:hover {
     cursor: pointer;
+    color: #ffc500;
 }
 
 .container-link {
@@ -881,7 +898,7 @@ progress::-moz-progress-bar {
     -ms-flex-align: center;
             align-items: center;
     text-align: center;
-    position: absolute;
+    position: fixed;
     width: 100%;
     margin-top: 10px;
 }
@@ -907,7 +924,7 @@ progress::-moz-progress-bar {
     -webkit-box-align: end;
     -ms-flex-align: end;
             align-items: flex-end;
-    position: absolute;
+    position: fixed;
     width: 100%;
     margin-top: 10px;
 }
@@ -924,28 +941,13 @@ progress::-moz-progress-bar {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: 20px;
-    height: 100%;
-}
-
-.container-arrow {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-            align-items: center;
-    position: absolute;
-    width: 100%;
-    top: 50%;
+    height: 100%    ;
 }
 
 .content img {
     display: none;
-    width: 100%;
+    width: 90%;
+    height: 90%;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
@@ -982,6 +984,13 @@ progress::-moz-progress-bar {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    top: 47%;
+    position: fixed;
+}
+
+.modal-previous:hover, .modal-next:hover {
+    cursor: pointer;
+    background-color: #ffaf37;
 }
 
 .modal-previous {
@@ -990,6 +999,7 @@ progress::-moz-progress-bar {
 
 .modal-next {
     margin-right: 20px;
+    right: 0;
 }
 
 .icon {
@@ -1001,11 +1011,71 @@ progress::-moz-progress-bar {
     cursor: pointer;
 }
 
-.content {
+.modal-container-content .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin: auto;
     width: -webkit-fit-content;
     width: -moz-fit-content;
-    width: fit-content;
+    width: 1280px;
+    height: 720px;
+}
+
+.container-tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px;
+}
+
+.container-tools-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+.container-tools-content img {
+    width: 100px;
+    margin: 0 auto 0 auto;
+}
+
+.container-tools .card:hover {
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card-tools-title {
+    text-align: center;
+    padding: 10px 0 10px 0;
+}
+
+.card-tools {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 20px 10px 20px;
+    width: 150px;
+    margin: 10px 0 10px 0;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1118,6 +1188,45 @@ progress::-moz-progress-bar {
         border-left: 2px solid transparent;
         margin-left: 25px;
     }
+
+    .container-tools {
+        padding: 0;
+    }
+
+    .container-tools-content {
+        flex-direction: row;
+    }
+
+    .card-tools {
+        flex-direction: column;
+        margin: 10px 10px 10px 10px;
+        flex-grow: 1;
+    }
+
+    .modal-container-content .content {
+        width: auto;
+        height: auto;
+    }
+
+    .container-arrow {
+        top: 48%;
+    }
+
+    .container-exp label {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0 10px 0;
+    }
+
+    .container-hobby .card {
+        height: 130px;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    
+
 }
 
 @-webkit-keyframes opacity {

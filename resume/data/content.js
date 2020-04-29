@@ -50,7 +50,7 @@ const INFO = {
 const ABOUT = {
     en : {
         title   : `about me`,
-        content : `Grand Theft Auto V is a 2013 action-adventure game developed by Rockstar North and published by Rockstar Games. It is the first main entry in the Grand Theft Auto series since 2008's Grand Theft Auto IV. Set within the fictional state of San Andreas, based on Southern California, the single-player story follows three criminals and their efforts to commit heists while under pressure from a government agency and powerful crime figures. The open world design lets players freely roam San Andreas' open countryside and the fictional city of Los Santos, based on Los Angeles.`
+        content : `introduce`
     },
     th : {
         title   : `แนะนำตัว`,
@@ -62,17 +62,17 @@ const HOBBY = {
     en : {
         title   :   `hobbies`,
         content :   [
-                        [`fas fa-gamepad fa-3x`, `Play game`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
-                        [`fas fa-music fa-3x`, `Listen to music`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
-                        [`fas fa-code fa-3x`, `Coding`, `countryside and the fictional city of Los Santos, based on Los Angeles.`],
+                        [`fas fa-gamepad fa-3x`, `Play game`, `test hobbies1`],
+                        [`fas fa-music fa-3x`, `Listen to music`, `test hobbies2`],
+                        [`fas fa-code fa-3x`, `Coding`, `test hobbies3`],
                     ]
     },
     th : {
         title   :   `งานอดิเรก`,
         content :   [
-                        [`fas fa-gamepad fa-3x`, `เล่นเกม`, `ทดสอบงานอดิเรก1`],
-                        [`fas fa-music fa-3x`, `ฟังเพลง`, `ทดสอบงานอดิเรก2`],
-                        [`fas fa-code fa-3x`, `เขียนโค้ด`, `ทดสอบงานอดิเรก3`],
+                        [`fas fa-gamepad fa-3x`, `เล่นเกม`, `ชอบเล่นเกมมาก ตั้งแต่ 9 ขวบจนตอนนี้ยังเล่นอยู่ และแบ่งเวลาได้เป็นอย่างดี`],
+                        [`fas fa-music fa-3x`, `ฟังเพลง`, `ฟังเพลงเป็นส่วนหนึ่งของชีวิตไปแล้ว แนวเพลงฮิปฮอป และแนวเพลงยุค 90`],
+                        [`fas fa-code fa-3x`, `เขียนโค้ด`, `การเขียนโค้ดทำให้ผมเรียนรู้วิธีการคิดแบบเป็นลำดับขั้น ถือว่ามีประโชยน์มากในการใช้ชีวิต`],
                     ]
     }
 
@@ -84,6 +84,7 @@ const SKILLS = {
         content_design      :   [
                                     [`HTML`, 50],
                                     [`CSS`, 65],
+                                    [`Inkscape`, 50],
                                 ],
         title_coding        :   `coding skills`,
         content_coding      :   [
@@ -96,16 +97,38 @@ const SKILLS = {
     th : {
         title_design        :   `ทักษะการออกแบบ`,
         content_design      :   [
+                                    [`Inkscape`, 65],
                                     [`HTML`, 50],
-                                    [`CSS`, 65],
+                                    [`CSS`, 35],
                                 ],
         title_coding        :   `ทักษะการเขียนโค้ด`,
         content_coding      :   [
                                     [`JavaScript`, 80],
                                     [`Python`, 50],
-                                    [`Java`, 35],
+                                    [`Java`, 40],
                                     [`C++`, 35],
                                 ]
+    }
+}
+
+const TOOLS = {
+    en : {
+        title_tools     :   `tools`,
+        content_tools   :   [
+                                [`tools_react.png`, `React, React Native`],
+                                [`tools_docker.png`, `Docker`],
+                                [`tools_nginx.png`, `NGINX`],
+                                [`tools_nodejs.png`, `Node.js`],
+                            ]
+    },
+    th : {
+        title_tools     :   `เครื่องมือ`,
+        content_tools   :   [
+                                [`tools_react.png`, `React, React Native`],
+                                [`tools_docker.png`, `Docker`],
+                                [`tools_nginx.png`, `NGINX`],
+                                [`tools_nodejs.png`, `Node.js`],
+                            ]
     }
 }
 
@@ -122,9 +145,9 @@ const RESUME = {
         ],
         education_title     :   `education`,
         education_content   :   [
-            [`University`, `2020`, `Rajamangala University of Technology Srivijaya Nakhon Si Thammarat Saiyai`],
-            [`High school`, `??`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
-            [`Middle school`, `??`, `Kanjanapisek Wittayalai Krabi School`]
+            [`University`, `2019`, `Rajamangala University of Technology Srivijaya Nakhon Si Thammarat Saiyai`],
+            [`High school`, `2014`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
+            [`Middle school`, `2011`, `Kanjanapisek Wittayalai Krabi School`]
         ]
     },
     th : {
@@ -137,8 +160,8 @@ const RESUME = {
         education_title     :   `การศึกษา`,
         education_content   :   [
             [`มหาวิทยาลัย`, `2562`, `มหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย วิทยาเขตนครศรีธรรมราช ไสใหญ่`],
-            [`มัธยมปลาย`, `??`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
-            [`มัธยมต้น`, `??`, `โรงเรียนกาญจนาภิเษกวิทยาลัย กระบี่`],
+            [`มัธยมปลาย`, `2557`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
+            [`มัธยมต้น`, `2554`, `โรงเรียนกาญจนาภิเษกวิทยาลัย กระบี่`],
         ]
     }
 }

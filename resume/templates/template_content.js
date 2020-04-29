@@ -17,6 +17,7 @@ function template_about() {
     let title_hobby = HOBBY[LANG]['title']
     let title_skill_design = SKILLS[LANG]['title_design']
     let title_skill_coding = SKILLS[LANG]['title_coding']
+    let title_tools = TOOLS[LANG]['title_tools']
     let markup = `
         <div class="title">${capitalizer(title_about)}</div>
         <div class="content">${ABOUT[LANG]['content']}</div>
@@ -33,6 +34,13 @@ function template_about() {
         </div>
 
         <div class="container-skill">
+            <div class="skill-coding">
+                <div class="title">${capitalizer(title_skill_coding)}</div>
+                ${SKILLS[LANG]['content_coding'].map((ele, i) => { return (`
+                    <div class="content-skill-title">${ele[0]}</div>
+                    <progress id="file" value="${ele[1]}" max="100"></progress>
+                `)}).join('')}
+            </div>
             <div class="skill-design">
                 <div class="title">${capitalizer(title_skill_design)}</div>
                 ${SKILLS[LANG]['content_design'].map((ele, i) => { return (`
@@ -40,11 +48,16 @@ function template_about() {
                     <progress id="file" value="${ele[1]}" max="100"></progress>
                 `)}).join('')}
             </div>
-            <div class="skill-coding">
-                <div class="title">${capitalizer(title_skill_coding)}</div>
-                ${SKILLS[LANG]['content_coding'].map((ele, i) => { return (`
-                    <div class="content-skill-title">${ele[0]}</div>
-                    <progress id="file" value="${ele[1]}" max="100"></progress>
+        </div>
+
+        <div class="container-tools">
+            <div class="title">${capitalizer(title_tools)}</div>
+            <div class="container-tools-content">
+                ${TOOLS[LANG]['content_tools'].map((ele, i) => { return (`
+                    <div id="card-tools-${i}" class="card card-tools">
+                        <img src="./assets/icons/${ele[0]}">
+                        <div class="card-tools-title">${ele[1]}</div>
+                    </div>
                 `)}).join('')}
             </div>
         </div>
@@ -120,7 +133,7 @@ function template_port() {
         <div class="container-port">
             ${PORT[LANG]['content'].map((ele, i) => { return (`
                 <div id="card-port-${i}" class="card card-port">
-                    ${ele[0].length == 0 ? `` : `<img src="./assets/images/port${i}/${ele[0][0]}.png" onclick="toggleModal(${i})" class="port-img">`}
+                    ${ele[0].length == 0 ? `` : `<div class="container-port-img"><img src="./assets/images/port${i}/${ele[0][0]}.png" onclick="toggleModal(${i})" class="port-img"></div>`}
                     <div class="more" onclick="toggleModal(${i})">
                         <span class="fa-stack fa-2x">
                             <i id="icon-bg" class="fas fa-circle fa-stack-2x"></i>
@@ -166,7 +179,7 @@ function templateModal(index) {
     }
     let markup = `
         <div id="modal-content" class="modal-content">
-            <div class="modal-container-content">
+            <div id="modal-container-content" class="modal-container-content">
                 <div class="modal-top">
                     <div class="modal-remain-container">
                         <span id="modal-remain-count">1</span><span> of ${LENGTH_MAX}</span>
@@ -175,15 +188,13 @@ function templateModal(index) {
                 <div class="modal-close-container">
                     <span class="modal-close" onclick="toggleModal()"><i class="fas fa-times fa-lg icon"></i></span>
                 </div>
-                <div class="content">
+                <div id="modal-content-img" class="content">
                     ${images.map((ele, i) => { return (`
-                        <img id="modal-img-${i}" src="./assets/images/port${index}/${ele}.png">
+                        <img id="modal-img-${i}" src="./assets/images/port${index}/${ele}.png" onclick="onZoom()">
                     `)}).join('')}
                 </div>
-                <div class="container-arrow">
-                    <span class="modal-previous" onclick="previousImage()"><i class="fas fa-arrow-left fa-lg icon"></i></span>
-                    <span class="modal-next" onclick="nextImage()"><i class="fas fa-arrow-right fa-lg icon"></i></span>
-                </div>
+                <div class="modal-previous" onclick="previousImage()"><i class="fas fa-arrow-left fa-lg icon"></i></div>
+                <div class="modal-next" onclick="nextImage()"><i class="fas fa-arrow-right fa-lg icon"></i></div>
             </div>
         </div>
     `
