@@ -122,6 +122,10 @@ function toggleClass() {
         document.getElementById(`card-hobby-${i}`).classList.toggle('card-dark-sub')
     })
 
+    TOOLS[LANG]['content_tools'].forEach((ele, i) => {
+        document.getElementById(`card-tools-${i}`).classList.toggle('card-dark-sub')
+    })
+
     PORT[LANG]['content'].forEach((ele, i) => {
         document.getElementById(`card-port-${i}`).classList.toggle('card-dark-sub')
     })
@@ -193,9 +197,7 @@ async function toggleModal(content_length) {
 
 function nextImage() {
     let length = LENGTH_MAX
-    for (let i = 0; i < length; i++) {
-        document.getElementById(`modal-img-${i}`).style.display = 'none'
-    }
+    onResetZoom(length)
     COUNT_NEXT_PREVIOUS += 1
     if (COUNT_NEXT_PREVIOUS > length - 1) {
         COUNT_NEXT_PREVIOUS = 0
@@ -210,9 +212,7 @@ function nextImage() {
 
 function previousImage() {
     let length = LENGTH_MAX
-    for (let i = 0; i < length; i++) {
-        document.getElementById(`modal-img-${i}`).style.display = 'none'
-    }
+    onResetZoom(length)
     COUNT_NEXT_PREVIOUS -= 1
     if (COUNT_NEXT_PREVIOUS < 0) {
         COUNT_NEXT_PREVIOUS = length - 1
@@ -235,5 +235,29 @@ function onKeyDown(event) {
             break
         default:
             break
+    }
+}
+
+
+
+
+function onZoom() {
+    if (window.innerWidth <= 1100) {
+        let imgContainer = document.getElementById(`modal-content-img`)
+        if (imgContainer.style.width == '1280px') {
+            imgContainer.style.width = 'auto'
+        } else {
+            imgContainer.style.width = '1280px'
+        }
+    }
+}
+
+
+
+
+function onResetZoom(length) {
+    document.getElementById(`modal-content-img`).style.width = 'auto'
+    for (let i = 0; i < length; i++) {
+        document.getElementById(`modal-img-${i}`).style.display = 'none'
     }
 }
