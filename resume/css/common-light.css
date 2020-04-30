@@ -287,7 +287,7 @@ label {
 
 .title { 
     font-size: 25px;
-    margin: 10px 0px 40px 0px;
+    margin: 10px 0px 20px 0px;
 }
 
 .container-skill {
@@ -297,17 +297,21 @@ label {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    margin-bottom: 70px;
+    margin: 0 0px 70px 0px;
+}
+
+.container-skill .title {
+    margin: 40px 0 20px 0;
 }
 
 .skill-design {
     width: 50%;
-    padding: 0px 20px 0px 0px;
+    padding: 0 0 0 20px;
 }
 
 .skill-coding {
     width: 50%;
-    padding: 0px 0px 0px 20px;
+    padding: 0 20px 0 0;
 }
 
 .content-skill-title {
@@ -346,7 +350,6 @@ progress::-moz-progress-bar {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin-bottom: 70px;
 }
 
 .timeline-working {
@@ -472,7 +475,6 @@ progress::-moz-progress-bar {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
-    margin-bottom: 70px;
 }
 
 .container-hobby .card {
@@ -482,7 +484,14 @@ progress::-moz-progress-bar {
     padding: 20px;
     margin: 10px;
     width: 150px;
-    height: 160px;
+}
+
+.container-hobby .card:first-child {
+    margin: 10px 10px 10px 0;
+}
+
+.container-hobby .card:last-child {
+    margin: 10px 0 10px 10px;
 }
 
 .container-hobby .card:hover {
@@ -580,7 +589,6 @@ progress::-moz-progress-bar {
         -ms-flex-align: center;
             align-items: center;
     height: 230px;
-    background-color: #fff;
 }
 
 .more {
@@ -946,7 +954,6 @@ progress::-moz-progress-bar {
 
 .content img {
     display: none;
-    width: 90%;
     height: 90%;
     -webkit-box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -1036,7 +1043,6 @@ progress::-moz-progress-bar {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 20px;
 }
 
 .container-tools-content {
@@ -1047,7 +1053,7 @@ progress::-moz-progress-bar {
         flex-wrap: wrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+            justify-content: space-around;
 }
 
 .container-tools-content img {
@@ -1194,13 +1200,21 @@ progress::-moz-progress-bar {
     }
 
     .container-tools-content {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
 
     .card-tools {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         margin: 10px 10px 10px 10px;
-        flex-grow: 1;
+        -webkit-box-flex: 1;
+            -ms-flex-positive: 1;
+                flex-grow: 1;
     }
 
     .modal-container-content .content {
@@ -1218,8 +1232,16 @@ progress::-moz-progress-bar {
         margin: 10px 0 10px 0;
     }
 
-    .container-hobby .card {
-        height: 130px;
+    .container-hobby .card:first-child {
+        margin: 10px;
+    }
+
+    .container-hobby .card:last-child {
+        margin: 10px;
+    }
+
+    .content img {
+        width: 90%;
     }
 }
 
