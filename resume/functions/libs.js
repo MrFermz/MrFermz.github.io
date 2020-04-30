@@ -11,3 +11,8 @@ function newTab(params) {
 function titleSetter(params) {
     document.title = `${capitalizer(params)} - Mr.Fermz`
 }
+
+
+function ageCalculator(params) {
+    return new Date().getFullYear() - params
+}
