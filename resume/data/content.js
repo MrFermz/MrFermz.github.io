@@ -50,13 +50,16 @@ const INFO = {
 const ABOUT = {
     en : {
         title   :   `about me`,
-        content :   `Hi, my name is Krittanupong Suksai can call me "Ferm". I'm ${ageCalculator (1995)} years old.
-                    Have a passion for computers since 9 years old until starting to study at the university in computer science
-                    therefore found something that liked since that time onwards.`
+        content :   `I am Krittanupong Suksai or "Ferm".
+                    I'm ${ageCalculator(1995)} years old. 
+                    I have a passion for the computer since I have 9 years old 
+                    until I study at the university I choose to study in the major of computer science. 
+                    And now, I know something that I like and I can make it good is all about the computer.`
     },
     th : {
         title   :   `แนะนำตัว`,
-        content :   `สวัสดีครับ ผมชื่อนายกฤตนุพงค์ สุกใส เรียกสั้น ๆ ว่า "เฟิร์ม" อายุ ${ageCalculator(1995)} ปี 
+        content :   `ผมชื่อนายกฤตนุพงค์ สุกใส เรียกสั้น ๆ ว่า "เฟิร์ม" 
+                    อายุ ${ageCalculator(1995)} ปี 
                     มีความชอบและหลงใหลในคอมพิวเตอร์เป็นอย่างมากตั้งแต่ 9 
                     ขวบจนได้เริ่มเรียนในมหาวิทยาลัยในสาขาวิทยาศาสตร์คอมพิวเตอร์ 
                     จึงได้เจอสิ่งที่ตนเองชอบตั้งแต่นั้นเป็นต้นมา`
@@ -67,15 +70,15 @@ const HOBBY = {
     en : {
         title   :   `hobbies`,
         content :   [
-                        [`fas fa-gamepad fa-3x`, `Play game`, `I like playing games a lot since 9 years old and still playing now. And can divide the time very well.`],
-                        [`fas fa-music fa-3x`, `Listen to music`, `Listening to music is already a part of life. I like hip-hop music. And the 1990s music.`],
-                        [`fas fa-code fa-3x`, `Coding`, `Writing code allows me to learn how to think step by step. Considered to be very useful in living.`],
+                        [`fas fa-gamepad fa-3x`, `Play game`, `The first time that I played games was 9 years old until now I still play game. But I can manage the time to play and work.`],
+                        [`fas fa-music fa-3x`, `Listen to music`, `Listening to music is already a part of life. I like hip-hop music. And the 90s music.`],
+                        [`fas fa-code fa-3x`, `Coding`, `Coding makes me know how to think systematically. They're is very useful in my life.`],
                     ]
     },
     th : {
         title   :   `งานอดิเรก`,
         content :   [
-                        [`fas fa-gamepad fa-3x`, `เล่นเกม`, `ชอบเล่นเกมมาก ตั้งแต่ 9 ขวบจนตอนนี้ยังเล่นอยู่ และแบ่งเวลาได้เป็นอย่างดี`],
+                        [`fas fa-gamepad fa-3x`, `เล่นเกม`, `ครั้งแรกที่เล่นเกมตั้งแต่อายุ 9 ขวบจนตอนนี้ยังเล่นอยู่ และแบ่งเวลาได้เป็นอย่างดี`],
                         [`fas fa-music fa-3x`, `ฟังเพลง`, `ฟังเพลงเป็นส่วนหนึ่งของชีวิตไปแล้ว ชอบแนวเพลงฮิปฮอป และแนวเพลงยุค 90`],
                         [`fas fa-code fa-3x`, `เขียนโค้ด`, `การเขียนโค้ดทำให้ผมเรียนรู้วิธีการคิดแบบเป็นลำดับขั้น ถือว่ามีประโชยน์มากในการใช้ชีวิต`],
                     ]
