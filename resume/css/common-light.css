@@ -915,7 +915,7 @@ progress::-moz-progress-bar {
     background-color: lightgray;
     border-radius: 50px;
     margin: 0 auto 0 auto;
-    padding: 0 10px 0 10px;
+    width: 80px;
 }
 
 .modal-close-container {
@@ -975,6 +975,7 @@ progress::-moz-progress-bar {
     -webkit-transition: .3s;
     -o-transition: .3s;
     transition: .3s;
+    padding: 5px;
 }
 
 .modal-close:hover {
@@ -1002,11 +1003,13 @@ progress::-moz-progress-bar {
 
 .modal-previous {
     margin-left: 20px;
+    padding: 5px;
 }
 
 .modal-next {
     margin-right: 20px;
     right: 0;
+    padding: 5px;
 }
 
 .icon {
