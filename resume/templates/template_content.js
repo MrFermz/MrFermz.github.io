@@ -133,7 +133,7 @@ function template_port() {
         <div class="container-port">
             ${PORT[LANG]['content'].map((ele, i) => { return (`
                 <div id="card-port-${i}" class="card card-port">
-                    ${ele[0].length == 0 ? `` : `<div class="container-port-img"><img src="./assets/images/port${i}/${ele[0][0]}.png" onclick="toggleModal(${i})" class="port-img"></div>`}
+                    ${ele[0].length == 0 ? `` : `<div id="container-port-img-${i}" class="container-port-img"><img src="./assets/images/port${i}/${ele[0][0]}.png" onclick="toggleModal(${i})" class="port-img"></div>`}
                     <div class="more" onclick="toggleModal(${i})">
                         <span class="fa-stack fa-2x">
                             <i id="icon-bg" class="fas fa-circle fa-stack-2x"></i>
