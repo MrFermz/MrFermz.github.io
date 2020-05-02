@@ -4,7 +4,7 @@ function template_info() {
     let markup = `
         <div id="card-left" class="card-left card">
             <div class="container-info">
-                <img class="avatar" src="./assets/images/avatar2.png">
+                <img class="avatar" src="./assets/images/avatar.png">
                 <div class="container-detail">
                     <div class="container-title">
                         <div class="container-info-icon">
