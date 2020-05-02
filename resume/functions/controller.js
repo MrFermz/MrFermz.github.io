@@ -128,8 +128,9 @@ function toggleClass() {
 
     PORT[LANG]['content'].forEach((ele, i) => {
         document.getElementById(`card-port-${i}`).classList.toggle('card-dark-sub')
+        document.getElementById(`container-port-img-${i}`).classList.toggle('card-dark-sub-2')
     })
-
+    
     EXP[LANG]['content'].forEach((ele, i) => {
         document.getElementById(`card-exp-${i}`).classList.toggle('card-dark-sub')
     })
