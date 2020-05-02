@@ -212,7 +212,7 @@ const PORT = {
                     `leaveapp12`,
                 ], 
                 `Leave Web App`, 
-                `Front-end and Back-end`, 
+                `Front-end develop on HTML, JavaScript, CSS. Back-end has on centOS, Docker, NGINX. Node.js as API and MySQL as main database.`, 
                 `fas fa-link fa-sm`, 
                 `https://github.com/MrFermz/leaveApp`
             ],
@@ -226,7 +226,7 @@ const PORT = {
                     `riceapp5`,
                 ],
                 `Rice Web App`, 
-                `Front-end and Back-end`, 
+                `Front-end development on React. Back-end use Node.js as API and MySQL as main Database.`, 
                 `fas fa-link fa-sm`, 
                 `https://github.com/MrFermz/rice-app`
             ],
@@ -242,14 +242,13 @@ const PORT = {
                     `actlog7`,
                     `actlog8`,
                     `actlog9`,
-                    `actlog10`,
                 ],
                 `Activity log App`, 
-                `Front-end and Back-end`, 
+                `Front-end has development on React Native. Admin development on React and back-end on firebase real-time database.`, 
                 `fas fa-link fa-sm`, 
                 `https://github.com/MrFermz/ACTLOG`
             ],
-            [``, ``, ``, ``, ``],
+            [[`actlog0`], ``, ``, ``, ``],
         ]
     },
     th : {
@@ -272,7 +271,7 @@ const PORT = {
                     `leaveapp12`,
                 ], 
                 `Leave Web App`, 
-                `Front-end and Back-end`, 
+                `Front-end ใช้ HTML, JavaScript, CSS ฝั่ง Back-end อยู่บน centOS, Docker, NGINX มีการใช้ Node.js เป็นตัว API และ MySQL เป็นฐานข้อมูลหลัก`, 
                 `fas fa-link fa-sm`, 
                 `https://github.com/MrFermz/leaveApp`
             ],
@@ -286,7 +285,7 @@ const PORT = {
                     `riceapp5`,
                 ],
                 `Rice Web App`, 
-                `Front-end and Back-end`, 
+                `Front-end ใช้ React ฝั่ง Back-end ใช้ Node.js เป็นตัว API และมี MySQL เป็นฐานข้อมูลหลัก`, 
                 `fas fa-link fa-sm`, 
                 `https://github.com/MrFermz/rice-app`
             ],
@@ -302,14 +301,13 @@ const PORT = {
                     `actlog7`,
                     `actlog8`,
                     `actlog9`,
-                    `actlog10`,
                 ],
                 `Activity log App`, 
-                `Front-end and Back-end`, 
+                `พัฒนาบน React Native และฝั่งแอดมินพัฒนาบน React ใช้ firebase เป็นฐานข้อมูลหลัก`, 
                 `fas fa-link fa-sm`, 
                 `https://github.com/MrFermz/ACTLOG`
             ],
-            [``, ``, ``, ``, ``],
+            [[`actlog0`], ``, ``, ``, ``],
         ]
     }
 }
