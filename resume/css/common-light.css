@@ -290,7 +290,7 @@ label {
     margin: 10px 0px 20px 0px;
 }
 
-.container-skill {
+/* .container-skill {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -302,9 +302,9 @@ label {
 
 .container-skill .title {
     margin: 40px 0 20px 0;
-}
+} */
 
-.skill-design {
+/* .skill-design {
     width: 50%;
     padding: 0 0 0 20px;
 }
@@ -312,14 +312,14 @@ label {
 .skill-coding {
     width: 50%;
     padding: 0 20px 0 0;
-}
+} */
 
-.content-skill-title {
+/* .content-skill-title {
     font-size: 14px;
     margin: 20px 0px 5px 0px;
-}
+} */
 
-progress {
+/* progress {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none;
@@ -338,7 +338,7 @@ progress::-webkit-progress-value {
 
 progress::-moz-progress-bar {
     background-color: #ffc500;
-}
+} */
 
 .container-timeline { 
     display: -webkit-box;
@@ -475,6 +475,7 @@ progress::-moz-progress-bar {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    margin-bottom: 60px;
 }
 
 .container-hobby .card {
@@ -1049,18 +1050,15 @@ progress::-moz-progress-bar {
 }
 
 .container-tools-content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 .container-tools-content img {
-    width: 100px;
+    width: 50px;
+    height: 50px;
     margin: 0 auto 0 auto;
 }
 
@@ -1075,16 +1073,13 @@ progress::-moz-progress-bar {
 }
 
 .card-tools {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 10px 20px 10px 20px;
-    width: 150px;
-    margin: 10px 0 10px 0;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 10px 10px 10px;
+    height: 80px;
+    width: 90px;
+    margin: 10px 10px 10px 10px;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -1150,14 +1145,14 @@ progress::-moz-progress-bar {
         width: auto;
     }
 
-    .container-skill {
+    /* .container-skill {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-    }
+    } */
 
-    .skill-design {
+    /* .skill-design {
         width: 100%;
         padding: 0px;
     }
@@ -1166,7 +1161,7 @@ progress::-moz-progress-bar {
         width: 100%;
         padding: 0px;
         margin: 40px 0px 0px 0px;
-    }
+    } */
 
     .container-timeline {
         display: -webkit-box;
@@ -1203,10 +1198,10 @@ progress::-moz-progress-bar {
     }
 
     .container-tools-content {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     .card-tools {
@@ -1214,10 +1209,7 @@ progress::-moz-progress-bar {
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        margin: 10px 10px 10px 10px;
-        -webkit-box-flex: 1;
-            -ms-flex-positive: 1;
-                flex-grow: 1;
+        margin: 10px;
     }
 
     .modal-container-content .content {
