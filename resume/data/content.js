@@ -123,19 +123,63 @@ const TOOLS = {
     en : {
         title_tools     :   `tools`,
         content_tools   :   [
-                                [`tools_react.png`, `React, React Native`],
+                                // Front-end
+                                [`tools_html5.png`, `HTML5`],
+                                [`tools_css3.png`, `CSS3`],
+                                [`tools_javascript.png`, `JavaScript`],
+                                [`tools_python.png`, `Python 3`],
+                                [`tools_java.png`, `Java`],
+                                [`tools_c++.png`, `C++`],
+
+                                // Front-end frame work
+                                [`tools_react.png`, `React`],
+                                [`tools_angular.png`, `Angular`],
+
+
+
+                                // Back-end
                                 [`tools_docker.png`, `Docker`],
                                 [`tools_nginx.png`, `NGINX`],
                                 [`tools_nodejs.png`, `Node.js`],
+
+                                // Database
+                                [`tools_mongo.png`, `MongoDB`],
+                                [`tools_maria.png`, `MariaDB`],
+
+
+                                // Other
+                                [`tools_git.png`, `Git`],
                             ]
     },
     th : {
         title_tools     :   `เครื่องมือ`,
         content_tools   :   [
-                                [`tools_react.png`, `React, React Native`],
+                                // Front-end
+                                [`tools_html5.png`, `HTML5`],
+                                [`tools_css3.png`, `CSS3`],
+                                [`tools_javascript.png`, `JavaScript`],
+                                [`tools_python.png`, `Python 3`],
+                                [`tools_java.png`, `Java`],
+                                [`tools_c++.png`, `C++`],
+
+                                // Front-end frame work
+                                [`tools_react.png`, `React`],
+                                [`tools_angular.png`, `Angular`],
+
+
+
+                                // Back-end
                                 [`tools_docker.png`, `Docker`],
                                 [`tools_nginx.png`, `NGINX`],
                                 [`tools_nodejs.png`, `Node.js`],
+
+                                // Database
+                                [`tools_mongo.png`, `MongoDB`],
+                                [`tools_maria.png`, `MariaDB`],
+
+
+                                // Other
+                                [`tools_git.png`, `Git`],
                             ]
     }
 }
