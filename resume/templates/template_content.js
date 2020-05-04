@@ -33,7 +33,7 @@ function template_about() {
             `)}).join('')}
         </div>
 
-        <div class="container-skill">
+        <!--<div class="container-skill">
             <div class="skill-coding">
                 <div class="title">${capitalizer(title_skill_coding)}</div>
                 ${SKILLS[LANG]['content_coding'].map((ele, i) => { return (`
@@ -48,7 +48,7 @@ function template_about() {
                     <progress id="file" value="${ele[1]}" max="100"></progress>
                 `)}).join('')}
             </div>
-        </div>
+        </div>-->
 
         <div class="container-tools">
             <div class="title">${capitalizer(title_tools)}</div>
