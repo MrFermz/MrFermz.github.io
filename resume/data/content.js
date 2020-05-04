@@ -197,7 +197,7 @@ const RESUME = {
         ],
         education_title     :   `education`,
         education_content   :   [
-            [`University`, `2019`, `Rajamangala University of Technology Srivijaya Nakhon Si Thammarat Saiyai`],
+            [`University`, `2019`, `Computer Science Rajamangala University of Technology Srivijaya Nakhon Si Thammarat Saiyai`],
             [`High school`, `2014`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
             [`Middle school`, `2011`, `Kanjanapisek Wittayalai Krabi School`]
         ]
@@ -211,7 +211,7 @@ const RESUME = {
         ],
         education_title     :   `การศึกษา`,
         education_content   :   [
-            [`มหาวิทยาลัย`, `2562`, `มหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย วิทยาเขตนครศรีธรรมราช ไสใหญ่`],
+            [`มหาวิทยาลัย`, `2562`, `วิทยาศาสตร์คอมพิวเตอร์ มหาวิทยาลัยเทคโนโลยีราชมงคลศรีวิชัย วิทยาเขตนครศรีธรรมราช ไสใหญ่`],
             [`มัธยมปลาย`, `2557`, `ศูนย์การศึกษานอกระบบและการศึกษาตามอัธยาศัยอำเภอลำทับ`],
             [`มัธยมต้น`, `2554`, `โรงเรียนกาญจนาภิเษกวิทยาลัย กระบี่`],
         ]
