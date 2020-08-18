@@ -21,7 +21,7 @@ async function onLoad() {
         <br>
         ${stat.players.sample ? stat.players.sample.map((ele, i) => {
             return (`
-            <div>${i + 1}. ${ele.name}</div>
+            <div><img class="avatar" src="https://crafatar.com/renders/head/${ele.id}?overlay=helm"> ${ele.name}</div>
         `)
         }).join('') : '<div>-</div>'}
     `
