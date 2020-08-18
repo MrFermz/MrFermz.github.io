@@ -19,7 +19,7 @@ async function onLoad() {
         <div>Version: ${stat.version.name}</div>
         <div>Players: ${stat.players.online} / ${stat.players.max}</div>
         <br>
-        ${stat.players.sample.length > 0 ? stat.players.sample.map((ele, i) => {
+        ${stat.players.sample ? stat.players.sample.map((ele, i) => {
             return (`
             <div>${i + 1}. ${ele.name}</div>
         `)
