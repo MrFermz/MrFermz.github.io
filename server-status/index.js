@@ -19,11 +19,11 @@ async function onLoad() {
         <div>Version: ${stat.version.name}</div>
         <div>Players: ${stat.players.online} / ${stat.players.max}</div>
         <br>
-        <div>${stat.players.sample.length > 0 ? stat.players.sample.map((ele, i) => {
+        ${stat.players.sample.length > 0 ? stat.players.sample.map((ele, i) => {
             return (`
-            ${i + 1}. ${ele.name}
+            <div>${i + 1}. ${ele.name}</div>
         `)
-        }).join('') : '-'}</div>
+        }).join('') : '<div>-</div>'}
     `
     } else {
         display = `
