@@ -3,6 +3,7 @@ var config = {
         protocol: 'https',
         host: 'mc-api.net',
         url: 'v3/server/ping',
-        ip: '103.253.73.21',
+        // ip: '103.253.73.21',
+        ip: 'grmpixelmon.com'
     }
 }
