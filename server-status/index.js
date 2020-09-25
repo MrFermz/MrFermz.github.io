@@ -18,7 +18,6 @@ async function onLoad() {
     let statReq = `${statProtocol}://${statHost}/${statUrl}/${statIp}`
     let stat = await queriesGET(statReq)
     // let timer = stat.cache.ttl * 1000
-    let motd = stat.description.text
 
     // console.log(stat)
     let options = [
@@ -27,10 +26,13 @@ async function onLoad() {
         { id: 'body3d', label: 'body 3d' },
     ]
 
-    for (let i = 0; i < motd.length; i++) {
-        if (motd[i] === '§') motd = motd.replace(motd[i] + motd[i + 1], ' ')
+    if (stat) {
+        let motd = stat.description.text
+        for (let i = 0; i < motd.length; i++) {
+            if (motd[i] === '§') motd = motd.replace(motd[i] + motd[i + 1], ' ')
+        }
+        result = motd.replace(/ +/g, ' ').trim()
     }
-    result = motd.replace(/ +/g, ' ').trim()
 
 
     let display = ''
@@ -89,28 +91,30 @@ async function onLoad() {
             `
     }
     document.getElementById('container').innerHTML = display
-    document.getElementById('select-type').value = SKIN_TYPE
+    if (stat.players.sample) {
+        document.getElementById('select-type').value = SKIN_TYPE
 
 
-    // add event ddl
-    let select = document.getElementById('select-type')
-    select.addEventListener('change', function (e) {
-        switch (e.target.value) {
-            case 'head2d':
-                SKIN_TYPE = e.target.value
-                localStorage.setItem('skinType', e.target.value)
-                onLoad()
-                break
-            case 'head3d':
-                SKIN_TYPE = e.target.value
-                localStorage.setItem('skinType', e.target.value)
-                onLoad()
-                break
-            case 'body3d':
-                SKIN_TYPE = e.target.value
-                localStorage.setItem('skinType', e.target.value)
-                onLoad()
-                break
-        }
-    })
+        // add event ddl
+        let select = document.getElementById('select-type')
+        select.addEventListener('change', function (e) {
+            switch (e.target.value) {
+                case 'head2d':
+                    SKIN_TYPE = e.target.value
+                    localStorage.setItem('skinType', e.target.value)
+                    onLoad()
+                    break
+                case 'head3d':
+                    SKIN_TYPE = e.target.value
+                    localStorage.setItem('skinType', e.target.value)
+                    onLoad()
+                    break
+                case 'body3d':
+                    SKIN_TYPE = e.target.value
+                    localStorage.setItem('skinType', e.target.value)
+                    onLoad()
+                    break
+            }
+        })
+    }
 }
